@@ -13,7 +13,7 @@
 }  */
 
       // Add Two Numbers
-import java.util.Scanner;      
+/* import java.util.Scanner;      
 public class Week1 {
 
     public static void main(String[] args) {
@@ -26,4 +26,22 @@ public class Week1 {
         
         System.out.println("Sum is: " + sum);
     }
-}  
+}   */
+
+//  Compare Two Strings
+import java.util.Scanner;
+
+public class Week1 {
+    public static void main(String[] args) {
+
+        Scanner sc = new Scanner(System.in);
+
+        String a = sc.nextLine();
+        String b = sc.nextLine();
+
+        if(a.equals(b))
+            System.out.println("Equal");
+        else
+            System.out.println("Not equal");
+    }
+}
