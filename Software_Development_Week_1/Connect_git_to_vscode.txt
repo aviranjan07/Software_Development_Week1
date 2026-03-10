@@ -1,0 +1,334 @@
+# 💻 GitHub + VS Code Complete Workflow (Beginner Guide)
+
+## 1️⃣ Create a Repository on GitHub
+
+1. Open GitHub.
+2. Click **"+" (top right)**.
+3. Click **New repository**.
+4. Write repository name.
+
+Example:
+
+```
+Software_Development_Week1
+```
+
+5. Add description (optional).
+6. Keep **Public** selected.
+7. Check:
+
+```
+Add a README file
+```
+
+8. Click:
+
+```
+Create repository
+```
+
+✅ Repository is now created.
+
+---
+
+# 2️⃣ Copy Repository Link
+
+Inside your repository:
+
+1. Click the **green "Code" button**.
+2. Select **HTTPS**.
+3. Copy the link.
+
+Example:
+
+```
+https://github.com/yourusername/Software_Development_Week1.git
+```
+
+---
+
+# 3️⃣ Connect Repository to Visual Studio Code
+
+Open VS Code.
+
+Press:
+
+```
+Ctrl + Shift + P
+```
+
+Type:
+
+```
+Git: Clone
+```
+
+Click **Git: Clone**.
+
+Paste repository link.
+
+Example:
+
+```
+https://github.com/yourusername/Software_Development_Week1.git
+```
+
+Press **Enter**.
+
+Choose folder where project will save.
+
+VS Code will ask:
+
+```
+Open cloned repository?
+```
+
+Click **Open**.
+
+✅ Now GitHub repo is connected to VS Code.
+
+---
+
+# 4️⃣ Create Files in VS Code
+
+Create files like:
+
+```
+Main.java
+day1.java
+notes.txt
+```
+
+Example Java code:
+
+```java
+public class Main {
+    public static void main(String[] args) {
+        System.out.println("Hello Software Development");
+    }
+}
+```
+
+Press:
+
+```
+Ctrl + S
+```
+
+to save.
+
+---
+
+# 5️⃣ Open Terminal in VS Code
+
+Open terminal:
+
+```
+Ctrl + `
+```
+
+or
+
+```
+Terminal → New Terminal
+```
+
+---
+
+# 6️⃣ Save Files to Git (git add)
+
+Command:
+
+```
+git add .
+```
+
+Meaning:
+
+```
+Add all files to Git tracking
+```
+
+---
+
+# 7️⃣ Commit Changes
+
+Command:
+
+```
+git commit -m "Added first Java program"
+```
+
+Meaning:
+
+```
+Save a snapshot of your code
+```
+
+---
+
+# 8️⃣ Push Code to GitHub
+
+Command:
+
+```
+git push
+```
+
+Meaning:
+
+```
+Upload code to GitHub repository
+```
+
+Now files appear on GitHub.
+
+---
+
+# ⚠️ Problem: Push Failed
+
+You may see error:
+
+```
+Invalid username or token
+Password authentication is not supported
+```
+
+This happens because **GitHub removed password login**.
+
+You must use a **Personal Access Token**.
+
+---
+
+# 🔐 Fix Git Push Error (Create Token)
+
+1. Open:
+
+```
+https://github.com/settings/tokens
+```
+
+2. Click:
+
+```
+Generate new token
+```
+
+3. Choose:
+
+```
+Generate new token (classic)
+```
+
+4. Give name:
+
+```
+VS Code Token
+```
+
+5. Select permission:
+
+```
+repo ✔
+```
+
+6. Click:
+
+```
+Generate token
+```
+
+7. Copy the token.
+
+Example:
+
+```
+ghp_xxxxxxxxxxxxxxxxx
+```
+
+---
+
+# 9️⃣ Push Again
+
+Run:
+
+```
+git push
+```
+
+Git will ask:
+
+```
+Username:
+```
+
+Type your GitHub username.
+
+Example:
+
+```
+aviranjaj007
+```
+
+Then it asks:
+
+```
+Password:
+```
+
+Paste the **token** (not GitHub password).
+
+---
+
+# ✅ Push Successful
+
+You will see something like:
+
+```
+Writing objects
+Counting objects
+Done
+```
+
+Your files will now appear on GitHub.
+
+---
+
+# 🔁 Normal Developer Workflow (Every Day)
+
+When working on code:
+
+```
+Write Code
+Save File
+git add .
+git commit -m "your message"
+git push
+```
+
+Example:
+
+```
+git add .
+git commit -m "Added day2 practice program"
+git push
+```
+
+---
+
+# 🧠 Quick Memory Shortcut
+
+Remember this order:
+
+```
+Create Repo
+Clone Repo
+Write Code
+Save
+git add .
+git commit
+git push
+```
+
+---
+
