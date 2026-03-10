@@ -1,5 +1,11 @@
-package Software_Development_Week_2;
+public class Day1 {
+    public static void main(String[] args) {
+    int a = 10;
+    int b = 20;
 
-public class day1 {
+System.out.println(a == b);
+System.out.println(a < b);
+System.out.println(a > b);
     
+    }
 }
