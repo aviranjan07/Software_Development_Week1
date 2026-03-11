@@ -60,7 +60,7 @@ public class Week1 {
 }     */
 
 // 3.  Take two numbers and add them.
-import java.util.Scanner;
+/* import java.util.Scanner;
 
 public class Week1 {
 
@@ -73,5 +73,22 @@ public class Week1 {
         
         int result = n1 + n2;
         System.out.println("the Sum of " + n1 + " + " + n2 + " is: " + result);
+    }
+} */
+
+// 4. Take two numbers and find subtraction.
+import java.util.Scanner;
+
+public class Week1 {
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter Two Number: ");
+
+        int n1 = sc.nextInt();
+        int n2 = sc.nextInt();
+        int result = n1 - n2;
+
+        System.out.println("The " + n1 + " - " + n2 + " is: " + result );
     }
 }
