@@ -141,7 +141,7 @@ public class Week1 {
 } */
 
 // 8. Find cube of a number/* 
-import java.util.Scanner;
+/*import java.util.Scanner;
 
 public class Week1 {
 
@@ -154,3 +154,12 @@ public class Week1 {
     }
 } */
 
+// Convert Celsius to Fahrenheit.
+/* public class Week1 {
+    public static void main(String[] args) {
+        int number = 30;
+        int result = (number * 9 / 5) + 32;
+        System.out.println(result + " F");
+    }
+
+} */
