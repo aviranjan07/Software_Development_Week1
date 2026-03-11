@@ -93,8 +93,9 @@ public class Week1 {
     }
 } */
 
-    // 5. Take two numbers and find multiplication.
-import java.util.Scanner;
+// 5. Take two numbers and find multiplication.
+/* import java.util.Scanner;
+
 public class Week1 {
 
     public static void main(String[] args) {
@@ -107,4 +108,4 @@ public class Week1 {
         int result = n1 * n2;
         System.out.println("the " + n1 + " * " + n2 + " is: " + result);
     }
-}
+} */
