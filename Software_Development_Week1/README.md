@@ -1,2 +1,26 @@
-# Software_Development_Week1
-Week 1 of my software development learning journey. This repository includes Java setup, first programs, terminal usage, pseudocode practice, and basic programming exercises.
+# Software Development Journey 🚀
+
+This repository documents my journey learning software development.
+
+## Week 1
+Topics covered:
+- Java setup
+- First Java programs
+- Basic terminal usage
+- Pseudocode practice
+- Programming fundamentals
+
+## Week 2
+Topics covered:
+- Input validation
+- Menu-driven programs
+- Functions and logic building
+
+## Technologies
+- Java
+- Git
+- GitHub
+- VS Code
+
+## Goal
+To become a job-ready developer by consistently practicing programming.
