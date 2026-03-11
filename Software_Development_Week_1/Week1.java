@@ -29,7 +29,7 @@ public class Week1 {
 }   */
 
 //  Compare Two Strings
-import java.util.Scanner;
+/* import java.util.Scanner;
 
 public class Week1 {
     public static void main(String[] args) {
@@ -45,4 +45,17 @@ public class Week1 {
             System.out.println("Not equal");
     }
     
-}
+} */
+
+    // Take a number from user and print it.
+import java.util.Scanner;
+public class Week1 {
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter number");
+        int n1 = sc.nextInt();
+        System.out.println("you enter: " + n1);
+    }
+}    
+
