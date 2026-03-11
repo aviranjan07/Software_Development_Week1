@@ -109,3 +109,22 @@ public class Week1 {
         System.out.println("the " + n1 + " * " + n2 + " is: " + result);
     }
 } */
+
+// 6. Take two numbers and find division.
+/* import java.util.Scanner;
+
+public class Week1 {
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter Two Number");
+        double n1 = sc.nextDouble();
+        double n2 = sc.nextDouble();
+        double result = n1 / n2;
+        if (n1 < n2) {
+            System.out.println("Divider can't be low");
+        } else {
+            System.out.println("Answer is: " + result);
+        }
+    }
+} */
