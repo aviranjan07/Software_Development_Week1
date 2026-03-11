@@ -163,3 +163,22 @@ public class Week1 {
     }
 
 } */
+
+    // 10. Calculate area of a circle.
+/* import java.util.Scanner;
+
+public class Week1 {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+
+        System.out.print("Enter the radius of the circle: ");
+        double radius = input.nextDouble();
+
+        // Calculate area: PI * r^2
+        double area = Math.PI * Math.pow(radius, 2);
+
+        System.out.println("The area of the circle is: " + area);
+
+        input.close();
+    }
+} */
