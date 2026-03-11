@@ -5,14 +5,14 @@
 }
  */
 
-    // Print Hello World
- /* public class Week1 {
-    public static void main(String[] args) {
-        System.out.println("Hello World");
-    }
+// Print Hello World
+/* public class Week1 {
+   public static void main(String[] args) {
+       System.out.println("Hello World");
+   }
 }  */
 
-      // Add Two Numbers
+// Add Two Numbers
 /* import java.util.Scanner;      
 public class Week1 {
 
@@ -47,8 +47,8 @@ public class Week1 {
     
 } */
 
-    // Take a number from user and print it.
-import java.util.Scanner;
+// 2. Take a number from user and print it.
+/* import java.util.Scanner;
 public class Week1 {
 
     public static void main(String[] args) {
@@ -57,5 +57,21 @@ public class Week1 {
         int n1 = sc.nextInt();
         System.out.println("you enter: " + n1);
     }
-}    
+}     */
 
+// 3.  Take two numbers and add them.
+import java.util.Scanner;
+
+public class Week1 {
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.println("Enter Two Number: ");
+        int n1 = sc.nextInt();
+        int n2 = sc.nextInt();
+        
+        int result = n1 + n2;
+        System.out.println("the Sum of " + n1 + " + " + n2 + " is: " + result);
+    }
+}
