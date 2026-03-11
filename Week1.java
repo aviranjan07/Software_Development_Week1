@@ -5,14 +5,14 @@
 }
  */
 
-    // Print Hello World
- /* public class Week1 {
-    public static void main(String[] args) {
-        System.out.println("Hello World");
-    }
+// Print Hello World
+/* public class Week1 {
+   public static void main(String[] args) {
+       System.out.println("Hello World");
+   }
 }  */
 
-      // Add Two Numbers
+// Add Two Numbers
 /* import java.util.Scanner;      
 public class Week1 {
 
@@ -29,7 +29,7 @@ public class Week1 {
 }   */
 
 //  Compare Two Strings
-import java.util.Scanner;
+/* import java.util.Scanner;
 
 public class Week1 {
     public static void main(String[] args) {
@@ -39,9 +39,10 @@ public class Week1 {
         String a = sc.nextLine();
         String b = sc.nextLine();
 
-        if(a.equals(b))
+        if (a.equals(b))
             System.out.println("Equal");
         else
             System.out.println("Not equal");
     }
 }
+ */
