@@ -128,3 +128,14 @@ public class Week1 {
         }
     }
 } */
+
+// 7.  Find square of a number.
+/* public class Week1 {
+
+    public static void main(String[] args) {
+        int number = 100;
+        int result = number * number;
+        System.out.println("Square is: " + result);
+
+    }
+} */
