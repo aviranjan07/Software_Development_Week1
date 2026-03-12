@@ -47,3 +47,18 @@
     }
 }     */
 
+    // Combining Multiple Conditions
+/* public class Week2 {
+
+    public static void main(String[] args) {
+        int age = 25;
+        boolean hasLicense = true;
+
+        if (age >= 18 && hasLicense) {
+            System.out.println("You can drive");
+        } else {
+            System.out.println("Not allowed to drive");
+        }
+    }
+}
+ */
