@@ -24,3 +24,14 @@
     }
 }
  */
+
+// OR Operator (||)/* 
+/* public class Week2 {
+
+    public static void main(String[] args) {
+        int marks = 30;
+        if (marks >= 30 || marks == 25) {
+            System.out.println("pass");
+        }
+    }
+} */
