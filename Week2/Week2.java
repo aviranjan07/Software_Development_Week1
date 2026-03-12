@@ -35,3 +35,15 @@
         }
     }
 } */
+
+//    NOT Operator (!)
+/* public class Week2 {
+
+    public static void main(String[] args) {
+        boolean isLog = false;
+        if (!isLog) {
+            System.out.println("Please Login First");
+        }
+    }
+}     */
+
