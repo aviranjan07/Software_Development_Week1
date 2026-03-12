@@ -62,3 +62,18 @@
     }
 }
  */
+
+//   ATM Withdrawal
+
+/* public class Week2 {
+
+    public static void main(String[] args) {
+        int balance = 5000;
+        int Withdrawal = 6000;
+        if (balance >= Withdrawal) {
+            System.out.println("withdrawal Successful");
+        }else {
+            System.out.println("insufficient balance");
+        }
+    }
+} */
