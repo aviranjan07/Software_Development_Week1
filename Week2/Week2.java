@@ -77,3 +77,17 @@
         }
     }
 } */
+
+    // Login System
+/* public class Week2 {
+
+    public static void main(String[] args) {
+        String userName = "Aviranjan";
+        String passWord = "1235`";
+        if (userName.equals("Aviranjan") && passWord.equals("1234")) {
+            System.out.println("Login Successful");
+        }else{
+            System.out.println("Invalid Password");
+        }
+    }
+}     */
