@@ -47,7 +47,7 @@
     }
 }     */
 
-    // Combining Multiple Conditions
+// Combining Multiple Conditions
 /* public class Week2 {
 
     public static void main(String[] args) {
@@ -78,7 +78,7 @@
     }
 } */
 
-    // Login System
+// Login System
 /* public class Week2 {
 
     public static void main(String[] args) {
@@ -91,3 +91,19 @@
         }
     }
 }     */
+
+// continue example
+/* public class Week2 {
+
+    public static void main(String[] args) {
+        for (int i = 1; i <= 5; i++) {
+
+            if (i == 3) {
+                continue;
+            }
+
+            System.out.println(i);
+        }
+
+    }
+} */
