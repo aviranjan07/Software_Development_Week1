@@ -107,3 +107,16 @@
 
     }
 } */
+
+// 1️⃣ Nested Loops (Very Important)
+/* public class Week2 {
+
+    public static void main(String[] args) {
+        for (int i = 1; i <= 3; i++) {
+            for (int j = 1; j <= 3; j++) {
+                for (int f = 1; f <= 3; f++)
+                    System.out.println(i + " " + j + " " + f);
+            }
+        }
+    }
+} */
