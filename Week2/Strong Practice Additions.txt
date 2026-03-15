@@ -1,0 +1,355 @@
+These are **excellent practice problems** for Week-2. They combine **loops, functions, conditions, validation, and menu logic** — exactly the skills a beginner developer needs.
+Below are **clear explanations + example Java logic** for each practice task.
+
+---
+
+# 🧠 Strong Practice Additions (With Logic + Example Code)
+
+---
+
+# 1️⃣ Login System (3 Attempts Limit)
+
+### Concept Used
+
+```text
+loop
+condition
+input validation
+counter
+```
+
+### Logic
+
+```text
+Allow user 3 login attempts
+If username + password correct → login success
+If attempts finished → account locked
+```
+
+### Example Code
+
+```java
+import java.util.Scanner;
+
+public class LoginSystem {
+
+    public static void main(String[] args){
+
+        Scanner sc = new Scanner(System.in);
+
+        String correctUser = "admin";
+        String correctPass = "1234";
+
+        int attempts = 0;
+
+        while(attempts < 3){
+
+            System.out.print("Enter username: ");
+            String user = sc.nextLine();
+
+            System.out.print("Enter password: ");
+            String pass = sc.nextLine();
+
+            if(user.equals(correctUser) && pass.equals(correctPass)){
+                System.out.println("Login successful");
+                return;
+            }
+            else{
+                System.out.println("Incorrect credentials");
+            }
+
+            attempts++;
+        }
+
+        System.out.println("Account locked after 3 attempts");
+    }
+}
+```
+
+---
+
+# 2️⃣ Even/Odd Counter in Range
+
+### Concept Used
+
+```text
+loops
+modulus operator
+counter variables
+```
+
+### Logic
+
+```text
+Loop from start → end
+Check if number % 2 == 0
+Increase even or odd counter
+```
+
+### Example Code
+
+```java
+public class EvenOddCounter {
+
+    public static void main(String[] args){
+
+        int evenCount = 0;
+        int oddCount = 0;
+
+        for(int i = 1; i <= 20; i++){
+
+            if(i % 2 == 0){
+                evenCount++;
+            }
+            else{
+                oddCount++;
+            }
+
+        }
+
+        System.out.println("Even numbers: " + evenCount);
+        System.out.println("Odd numbers: " + oddCount);
+    }
+}
+```
+
+Output:
+
+```text
+Even numbers: 10
+Odd numbers: 10
+```
+
+---
+
+# 3️⃣ Factorial Using Function
+
+### Concept Used
+
+```text
+functions
+loops
+return value
+```
+
+### Factorial Formula
+
+```text
+n! = n × (n-1) × (n-2) × ... × 1
+```
+
+Example:
+
+```text
+5! = 5×4×3×2×1 = 120
+```
+
+### Code
+
+```java
+public class FactorialExample {
+
+    static int factorial(int n){
+
+        int result = 1;
+
+        for(int i = 1; i <= n; i++){
+            result = result * i;
+        }
+
+        return result;
+    }
+
+    public static void main(String[] args){
+
+        int value = factorial(5);
+
+        System.out.println("Factorial = " + value);
+    }
+}
+```
+
+Output:
+
+```text
+Factorial = 120
+```
+
+---
+
+# 4️⃣ Password Strength Checker
+
+### Concept Used
+
+```text
+conditions
+string length
+validation
+```
+
+### Password Rules Example
+
+```text
+Length < 6 → Weak
+Length 6–10 → Medium
+Length > 10 → Strong
+```
+
+### Code
+
+```java
+import java.util.Scanner;
+
+public class PasswordChecker {
+
+    public static void main(String[] args){
+
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter password: ");
+        String password = sc.nextLine();
+
+        int length = password.length();
+
+        if(length < 6){
+            System.out.println("Weak password");
+        }
+        else if(length <= 10){
+            System.out.println("Medium strength password");
+        }
+        else{
+            System.out.println("Strong password");
+        }
+
+    }
+}
+```
+
+---
+
+# 5️⃣ Simple Menu Calculator (Loop + Function)
+
+### Concept Used
+
+```text
+menu-driven program
+loops
+functions
+switch
+```
+
+### Menu
+
+```text
+1 Add
+2 Subtract
+3 Multiply
+4 Exit
+```
+
+---
+
+### Code
+
+```java
+import java.util.Scanner;
+
+public class CalculatorMenu {
+
+    static int add(int a, int b){
+        return a + b;
+    }
+
+    static int subtract(int a, int b){
+        return a - b;
+    }
+
+    static int multiply(int a, int b){
+        return a * b;
+    }
+
+    public static void main(String[] args){
+
+        Scanner sc = new Scanner(System.in);
+        int choice;
+
+        do{
+
+            System.out.println("---- Calculator ----");
+            System.out.println("1 Add");
+            System.out.println("2 Subtract");
+            System.out.println("3 Multiply");
+            System.out.println("4 Exit");
+
+            choice = sc.nextInt();
+
+            if(choice == 4) break;
+
+            System.out.print("Enter first number: ");
+            int a = sc.nextInt();
+
+            System.out.print("Enter second number: ");
+            int b = sc.nextInt();
+
+            switch(choice){
+
+                case 1:
+                    System.out.println("Result = " + add(a,b));
+                    break;
+
+                case 2:
+                    System.out.println("Result = " + subtract(a,b));
+                    break;
+
+                case 3:
+                    System.out.println("Result = " + multiply(a,b));
+                    break;
+
+                default:
+                    System.out.println("Invalid choice");
+            }
+
+        }while(choice != 4);
+
+        System.out.println("Calculator closed");
+    }
+}
+```
+
+---
+
+# 🔥 Why These Exercises Are Very Powerful
+
+These problems combine **many programming concepts together**:
+
+| Concept          | Used In                |
+| ---------------- | ---------------------- |
+| loops            | login system, counters |
+| functions        | factorial, calculator  |
+| conditions       | password checker       |
+| menu logic       | calculator             |
+| input validation | login system           |
+
+Mastering these will improve:
+
+```text
+logic building
+debugging ability
+coding interview readiness
+```
+
+---
+
+# 🚀 Pro Developer Challenge (Try These Too)
+
+After solving above, try these **slightly harder**:
+
+```
+1️⃣ Prime number checker
+2️⃣ Number guessing game
+3️⃣ Multiplication table generator
+4️⃣ Student grade calculator
+5️⃣ ATM system with withdraw/deposit
+```
+
+---
