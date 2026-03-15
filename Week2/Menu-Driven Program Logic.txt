@@ -1,0 +1,415 @@
+# 🔹 9. Menu-Driven Program Logic
+
+*(Very common in exams, beginner interviews, and real console apps)*
+
+A **menu-driven program** is a program that repeatedly shows the user a **list of options (menu)** and performs actions based on the **user’s choice**.
+
+Example menu:
+
+```
+1. Withdraw
+2. Deposit
+3. Check Balance
+4. Exit
+```
+
+The user selects an option, the program performs the action, and then **returns to the menu again** until the user chooses **Exit**.
+
+This concept is widely used in:
+
+```
+ATM machines
+Console applications
+Bank systems
+Basic games
+Student management systems
+```
+
+---
+
+# 1️⃣ Basic Structure of a Menu-Driven Program
+
+A typical menu program contains **three core components**:
+
+```
+1️⃣ Loop → keeps the menu repeating
+2️⃣ User input → selects option
+3️⃣ Condition handling → executes action
+```
+
+Basic logic:
+
+```
+Start program
+      ↓
+Display menu
+      ↓
+User enters choice
+      ↓
+Program performs action
+      ↓
+Return to menu
+      ↓
+Exit when user selects exit option
+```
+
+---
+
+# 2️⃣ Example Menu-Driven Program (Java)
+
+```java
+import java.util.Scanner;
+
+public class MenuExample {
+
+    public static void main(String[] args){
+
+        Scanner sc = new Scanner(System.in);
+        int choice;
+
+        do{
+
+            System.out.println("----- MENU -----");
+            System.out.println("1 Add");
+            System.out.println("2 Subtract");
+            System.out.println("3 Exit");
+
+            System.out.print("Enter choice: ");
+            choice = sc.nextInt();
+
+            if(choice == 1){
+                System.out.println("Addition selected");
+            }
+            else if(choice == 2){
+                System.out.println("Subtraction selected");
+            }
+
+        }while(choice != 3);
+
+        System.out.println("Program exited");
+
+    }
+
+}
+```
+
+---
+
+# 3️⃣ Repeating Options Using Loop
+
+A loop keeps the menu **running continuously**.
+
+Common loops used:
+
+```
+while loop
+do-while loop (most common)
+```
+
+Why `do-while` is preferred:
+
+```
+Menu must appear at least once
+Condition checked after execution
+```
+
+Example logic:
+
+```
+show menu
+take input
+process choice
+repeat until exit
+```
+
+---
+
+# 4️⃣ Exit Condition
+
+The **exit condition** stops the program.
+
+Example:
+
+```
+4 → Exit
+```
+
+Loop condition:
+
+```java
+while(choice != 4)
+```
+
+Meaning:
+
+```
+If user selects 4 → program stops
+Otherwise → menu repeats
+```
+
+Without an exit condition, the program may become an **infinite loop**.
+
+---
+
+# 5️⃣ User Choice Handling
+
+Programs must handle **different user choices**.
+
+Usually done with:
+
+```
+if-else
+switch statement
+```
+
+---
+
+### Example Using switch (Better Approach)
+
+```java
+switch(choice){
+
+    case 1:
+        System.out.println("Withdraw selected");
+        break;
+
+    case 2:
+        System.out.println("Deposit selected");
+        break;
+
+    case 3:
+        System.out.println("Check balance");
+        break;
+
+    case 4:
+        System.out.println("Exit");
+        break;
+
+    default:
+        System.out.println("Invalid choice");
+
+}
+```
+
+Advantages of `switch`:
+
+```
+clean code
+easy to read
+good for many options
+```
+
+---
+
+# 6️⃣ Real Example — Simple ATM Menu
+
+```java
+import java.util.Scanner;
+
+public class ATM {
+
+    public static void main(String[] args){
+
+        Scanner sc = new Scanner(System.in);
+        int choice;
+        int balance = 5000;
+
+        do{
+
+            System.out.println("---- ATM MENU ----");
+            System.out.println("1 Check Balance");
+            System.out.println("2 Withdraw");
+            System.out.println("3 Exit");
+
+            choice = sc.nextInt();
+
+            switch(choice){
+
+                case 1:
+                    System.out.println("Balance: " + balance);
+                    break;
+
+                case 2:
+                    System.out.println("Withdrawal feature");
+                    break;
+
+                case 3:
+                    System.out.println("Thank you");
+                    break;
+
+                default:
+                    System.out.println("Invalid option");
+
+            }
+
+        }while(choice != 3);
+
+    }
+
+}
+```
+
+This program demonstrates:
+
+```
+loop
+user input
+condition handling
+exit condition
+```
+
+---
+
+# 7️⃣ Adding Input Validation
+
+Real systems also check **invalid choices**.
+
+Example:
+
+```
+User enters 10
+```
+
+Program response:
+
+```
+Invalid option
+Please try again
+```
+
+Example:
+
+```java
+if(choice < 1 || choice > 4){
+    System.out.println("Invalid choice");
+}
+```
+
+---
+
+# 8️⃣ Visual Flow of Menu Program
+
+```
+Start
+  ↓
+Show Menu
+  ↓
+User enters choice
+  ↓
+Process action
+  ↓
+Exit chosen?
+  ↓
+No → Show menu again
+Yes → Stop program
+```
+
+---
+
+# 9️⃣ Common Beginner Mistakes
+
+### 1️⃣ Forgetting exit condition
+
+```
+while(true)
+```
+
+Without break → infinite loop.
+
+---
+
+### 2️⃣ Missing break in switch
+
+```java
+case 1:
+System.out.println("Option1");
+```
+
+Without `break`, execution may continue to next case.
+
+---
+
+### 3️⃣ Not handling invalid input
+
+Program may behave incorrectly if user enters wrong value.
+
+---
+
+# 🔟 Real Developer Applications
+
+Menu-driven logic is used in:
+
+| System         | Example            |
+| -------------- | ------------------ |
+| ATM machine    | withdraw, deposit  |
+| Bank system    | account operations |
+| Calculator     | add, subtract      |
+| Game menu      | start, settings    |
+| Student system | add, view          |
+
+These programs rely on:
+
+```
+loops
+conditions
+input validation
+functions
+```
+
+---
+
+# Practice Problems
+
+### Problem 1
+
+Create menu:
+
+```
+1 Add
+2 Multiply
+3 Exit
+```
+
+---
+
+### Problem 2
+
+Create simple **calculator menu**.
+
+```
+1 Addition
+2 Subtraction
+3 Multiplication
+4 Exit
+```
+
+---
+
+### Problem 3
+
+Create **ATM menu**:
+
+```
+1 Check Balance
+2 Withdraw
+3 Deposit
+4 Exit
+```
+
+---
+
+# Real Developer Insight
+
+Menu-driven programs are important because they combine many fundamental concepts:
+
+```
+loops
+conditions
+functions
+input validation
+program flow control
+```
+
+That’s why they are **very common in exams and beginner interviews**.
+
+---
