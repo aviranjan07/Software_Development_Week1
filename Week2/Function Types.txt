@@ -1,0 +1,502 @@
+# 🔹 4. Function Types (Very Important for Real Programming)
+
+```
+calculate salary
+login validation
+add two numbers
+calculate tax
+```
+
+Functions help in:
+
+```
+code reuse
+clean code
+easy debugging
+modular programming
+```
+
+---
+
+# Basic Structure of a Function (Java)
+
+```java
+returnType functionName(parameters){
+    // code
+}
+```
+
+Example:
+
+```java
+int add(int a, int b){
+    return a + b;
+}
+```
+
+Explanation:
+
+```
+int → return type
+add → function name
+(int a, int b) → parameters
+return → returns result
+```
+
+---
+
+# 🔹 Four Types of Functions
+
+Functions are mainly divided into **four categories**.
+
+```
+1️⃣ No parameter, no return
+2️⃣ Parameter but no return
+3️⃣ Return but no parameter
+4️⃣ Parameter + return  (most important)
+```
+
+---
+
+# 1️⃣ No Parameter, No Return
+
+This function:
+
+```
+takes no input
+returns no value
+```
+
+It just **performs an action**.
+
+### Example
+
+```java
+void greet(){
+
+    System.out.println("Hello, welcome to programming");
+
+}
+```
+
+Calling the function:
+
+```java
+greet();
+```
+
+Output:
+
+```
+Hello, welcome to programming
+```
+
+Explanation:
+
+```
+void → no return value
+() → no parameters
+```
+
+---
+
+### Real Example
+
+Print system message.
+
+```java
+void showMenu(){
+
+    System.out.println("1 Login");
+    System.out.println("2 Register");
+    System.out.println("3 Exit");
+
+}
+```
+
+Used in **menu systems**.
+
+---
+
+# 2️⃣ Parameter but No Return
+
+This function:
+
+```
+takes input
+but does not return value
+```
+
+### Example
+
+```java
+void printSquare(int number){
+
+    System.out.println(number * number);
+
+}
+```
+
+Calling:
+
+```java
+printSquare(5);
+```
+
+Output:
+
+```
+25
+```
+
+Explanation:
+
+```
+number = input
+function prints result
+no return value
+```
+
+---
+
+### Real Example
+
+Bank deposit message.
+
+```java
+void deposit(int amount){
+
+    System.out.println("Deposited: " + amount);
+
+}
+```
+
+---
+
+# 3️⃣ Return but No Parameter
+
+This function:
+
+```
+takes no input
+returns a value
+```
+
+Example:
+
+```java
+int getNumber(){
+
+    return 100;
+
+}
+```
+
+Calling:
+
+```java
+int result = getNumber();
+
+System.out.println(result);
+```
+
+Output:
+
+```
+100
+```
+
+Explanation:
+
+```
+function generates value
+returns it
+```
+
+---
+
+### Real Example
+
+Get system year.
+
+```java
+int getYear(){
+
+    return 2026;
+
+}
+```
+
+---
+
+# 4️⃣ Parameter + Return (MOST IMPORTANT)
+
+This is the **most common function type in real programming**.
+
+This function:
+
+```
+takes input
+processes it
+returns result
+```
+
+Example:
+
+```java
+int add(int a, int b){
+
+    return a + b;
+
+}
+```
+
+Calling:
+
+```java
+int result = add(10, 5);
+
+System.out.println(result);
+```
+
+Output:
+
+```
+15
+```
+
+---
+
+### Real World Example — Salary Calculation
+
+```java
+double calculateSalary(double basic, double bonus){
+
+    return basic + bonus;
+
+}
+```
+
+Calling:
+
+```java
+double salary = calculateSalary(20000, 5000);
+```
+
+Output:
+
+```
+25000
+```
+
+---
+
+# Visual Understanding
+
+```
+Input → Function → Output
+```
+
+Example:
+
+```
+5 , 10 → add() → 15
+```
+
+Flow:
+
+```
+parameters → processing → return
+```
+
+---
+
+# Comparison of Function Types
+
+| Function Type           | Parameters | Return Value |
+| ----------------------- | ---------- | ------------ |
+| No parameter, no return | ❌          | ❌            |
+| Parameter, no return    | ✔          | ❌            |
+| Return, no parameter    | ❌          | ✔            |
+| Parameter + return      | ✔          | ✔            |
+
+---
+
+# Real Developer Example
+
+### Login System
+
+```java
+boolean login(String username, String password){
+
+    if(username.equals("admin") && password.equals("1234")){
+        return true;
+    }
+
+    return false;
+}
+```
+
+Calling:
+
+```java
+if(login("admin","1234")){
+    System.out.println("Login Successful");
+}
+```
+
+This is **parameter + return type**.
+
+---
+
+# Common Beginner Mistakes
+
+### 1️⃣ Forgetting return
+
+Wrong:
+
+```java
+int add(int a,int b){
+
+    a + b;
+
+}
+```
+
+Correct:
+
+```java
+return a + b;
+```
+
+---
+
+### 2️⃣ Wrong return type
+
+Wrong:
+
+```java
+int greet(){
+
+    return "Hello";
+}
+```
+
+Correct:
+
+```
+return type must match value
+```
+
+---
+
+### 3️⃣ Calling function incorrectly
+
+Wrong:
+
+```
+add;
+```
+
+Correct:
+
+```
+add();
+```
+
+---
+
+# Real Software Examples
+
+| System       | Function Example               |
+| ------------ | ------------------------------ |
+| ATM          | withdraw(amount)               |
+| E-commerce   | calculatePrice(item, quantity) |
+| Login system | login(username,password)       |
+| Banking      | checkBalance(accountId)        |
+| Games        | calculateScore(player)         |
+
+Functions make programs **modular and reusable**.
+
+---
+
+# Practice Problems
+
+### Problem 1
+
+Create function:
+
+```
+printHello()
+```
+
+(No parameter, no return)
+
+---
+
+### Problem 2
+
+Create function:
+
+```
+printCube(number)
+```
+
+(Parameter but no return)
+
+---
+
+### Problem 3
+
+Create function:
+
+```
+getRandomNumber()
+```
+
+(Return but no parameter)
+
+---
+
+### Problem 4
+
+Create function:
+
+```
+multiply(a,b)
+```
+
+(Parameter + return)
+
+---
+
+# Why Parameter + Return is Most Important
+
+Because real software works like this:
+
+```
+Input → process → output
+```
+
+Examples:
+
+```
+search(query) → results
+calculateTax(income) → tax amount
+login(username,password) → true/false
+```
+
+Almost **every real system function follows this model**.
+
+---
+
+# Summary
+
+| Topic     | Key Idea             |
+| --------- | -------------------- |
+| Function  | reusable code block  |
+| Parameter | input to function    |
+| Return    | output from function |
+| Best type | parameter + return   |
+
+---
