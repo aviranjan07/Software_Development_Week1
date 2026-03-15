@@ -1,0 +1,430 @@
+# 🔹 5. Function Reusability & DRY Principle (Real Developer Mindset)
+
+# 1️⃣ What is DRY Principle?
+
+**DRY = Don't Repeat Yourself**
+
+Meaning:
+
+> Do not write the **same code multiple times**.
+
+Instead:
+
+```text
+Write the code once
+Reuse it using functions
+```
+
+This makes programs:
+
+```
+clean
+maintainable
+easy to update
+professional
+```
+
+---
+
+# 2️⃣ Example of Bad Code (Repeated Code)
+
+Imagine a program that calculates the **square of numbers**.
+
+### ❌ Without Function (Bad Practice)
+
+```java
+int num1 = 5;
+System.out.println(num1 * num1);
+
+int num2 = 8;
+System.out.println(num2 * num2);
+
+int num3 = 10;
+System.out.println(num3 * num3);
+```
+
+Problem:
+
+```
+same logic repeated many times
+hard to maintain
+```
+
+If logic changes, you must **change everywhere**.
+
+---
+
+# 3️⃣ Using Function (DRY Principle)
+
+### ✅ Good Practice
+
+```java
+void square(int number){
+
+    System.out.println(number * number);
+
+}
+```
+
+Calling function:
+
+```java
+square(5);
+square(8);
+square(10);
+```
+
+Now:
+
+```
+logic written once
+used many times
+```
+
+---
+
+# 4️⃣ Why Reusability is Important
+
+Professional systems contain **thousands of lines of code**.
+
+If developers repeat code:
+
+```
+code becomes messy
+bugs increase
+maintenance becomes difficult
+```
+
+Reusable functions make programs:
+
+```
+modular
+organized
+scalable
+```
+
+---
+
+# 5️⃣ Real World Example — Login System
+
+### ❌ Without Function
+
+```java
+if(username.equals("admin") && password.equals("1234")){
+    System.out.println("Login success");
+}
+
+if(username.equals("admin") && password.equals("1234")){
+    System.out.println("Access granted");
+}
+
+if(username.equals("admin") && password.equals("1234")){
+    System.out.println("Dashboard opened");
+}
+```
+
+Same logic repeated **three times**.
+
+---
+
+### ✅ Using Reusable Function
+
+```java
+boolean login(String username, String password){
+
+    if(username.equals("admin") && password.equals("1234")){
+        return true;
+    }
+
+    return false;
+}
+```
+
+Using it:
+
+```java
+if(login("admin","1234")){
+    System.out.println("Login success");
+}
+
+if(login("admin","1234")){
+    System.out.println("Access granted");
+}
+```
+
+Now the logic exists **only in one place**.
+
+---
+
+# 6️⃣ Small Reusable Functions
+
+Professional developers create **small functions for each task**.
+
+Example:
+
+Bad approach:
+
+```
+one huge function doing everything
+```
+
+Good approach:
+
+```
+small focused functions
+```
+
+Example system:
+
+```
+login()
+calculateTax()
+validateEmail()
+printMenu()
+processPayment()
+```
+
+Each function does **one job only**.
+
+---
+
+# 7️⃣ Example of Clean Structure Thinking
+
+Instead of writing a messy program:
+
+### ❌ Messy Code
+
+```java
+System.out.println("Welcome");
+
+int a = 10;
+int b = 5;
+System.out.println(a + b);
+
+System.out.println("Thank you");
+```
+
+---
+
+### ✅ Clean Structured Code
+
+```java
+void welcome(){
+    System.out.println("Welcome");
+}
+
+int add(int a,int b){
+    return a + b;
+}
+
+void goodbye(){
+    System.out.println("Thank you");
+}
+```
+
+Main program:
+
+```java
+welcome();
+
+int result = add(10,5);
+System.out.println(result);
+
+goodbye();
+```
+
+Now the program is **modular**.
+
+---
+
+# 8️⃣ Real Software Example
+
+In a banking system:
+
+Functions may look like this:
+
+```
+checkBalance()
+withdrawMoney()
+depositMoney()
+validateUser()
+calculateInterest()
+```
+
+Each function:
+
+```
+reusable
+independent
+easy to test
+```
+
+---
+
+# 9️⃣ Benefits of DRY Principle
+
+| Benefit            | Explanation         |
+| ------------------ | ------------------- |
+| Less code          | no repetition       |
+| Easy debugging     | fix in one place    |
+| Better readability | clean structure     |
+| Reusability        | used multiple times |
+| Professional code  | industry standard   |
+
+---
+
+# 🔟 Developer Thinking Method
+
+Professional programmers think like this:
+
+```
+Is this code repeated?
+→ convert it into a function
+```
+
+Example pattern:
+
+```
+task repeated → create function
+logic reused → create function
+large code → split into functions
+```
+
+This is called **modular thinking**.
+
+---
+
+# Example Developer Structure
+
+Professional programs look like this:
+
+```
+main()
+│
+├── login()
+├── showMenu()
+├── processOrder()
+├── calculatePrice()
+└── printReceipt()
+```
+
+Each function performs **one task**.
+
+---
+
+# Common Beginner Mistakes
+
+### 1️⃣ Writing long repeated code
+
+Beginners often copy-paste logic.
+
+Better approach:
+
+```
+create reusable function
+```
+
+---
+
+### 2️⃣ Creating huge functions
+
+Bad example:
+
+```
+function with 200 lines
+```
+
+Better:
+
+```
+many small functions
+```
+
+---
+
+### 3️⃣ Not naming functions clearly
+
+Bad name:
+
+```
+function1()
+```
+
+Good name:
+
+```
+calculateSalary()
+validateLogin()
+```
+
+---
+
+# Practice Exercise
+
+### Problem 1
+
+Create reusable function:
+
+```
+printLine()
+```
+
+Prints:
+
+```
+--------------
+```
+
+Call it **5 times**.
+
+---
+
+### Problem 2
+
+Create function:
+
+```
+calculateArea(length, width)
+```
+
+Return rectangle area.
+
+---
+
+### Problem 3
+
+Create reusable function:
+
+```
+isEven(number)
+```
+
+Return:
+
+```
+true if number even
+false if odd
+```
+
+---
+
+# Real Developer Mindset Summary
+
+Professional developers always think:
+
+```
+Is my code reusable?
+Can this be a function?
+Am I repeating logic?
+```
+
+Answer should be:
+
+```
+Write once
+Use many times
+```
+
+That is the **DRY Principle**.
+
+---
