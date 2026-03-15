@@ -12,9 +12,15 @@ Topics covered:
 
 ## Week 2
 Topics covered:
-- Input validation
-- Menu-driven programs
-- Functions and logic building
+🔹 Comparison & Logical Operators (AND, OR, NOT)
+🔹 Loop Control Statements (break, continue)
+🔹 Nested Loops & Pattern Logic
+🔹 Do-while Loop and menu-driven program logic
+🔹 Functions and different function types
+🔹 Function Reusability & the DRY Principle (Don't Repeat Yourself)
+🔹 Local vs Global Scope and variable lifetime
+🔹 Tracing & Dry Run techniques for better debugging
+🔹 Basic Input Validation for real-world programs
 
 ## Technologies
 - Java
