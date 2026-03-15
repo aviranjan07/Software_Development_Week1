@@ -1,0 +1,415 @@
+# 🔹 3. Do-While Loop Concept (Deep Understanding)
+
+A **do-while loop** is a loop where the **code runs first**, and the **condition is checked after execution**.
+
+This means:
+
+> The loop **always executes at least one time**, even if the condition is false.
+
+This is the **main difference** from the normal `while` loop.
+
+---
+
+# 1️⃣ Structure of Do-While Loop
+
+### Syntax
+
+```java
+do{
+    // code to execute
+}
+while(condition);
+```
+
+Important points:
+
+```
+Code runs first
+Condition checked later
+Semicolon required after while(condition);
+```
+
+---
+
+# 2️⃣ Simple Example
+
+```java
+int i = 1;
+
+do{
+    System.out.println(i);
+    i++;
+}
+while(i <= 5);
+```
+
+### Output
+
+```
+1
+2
+3
+4
+5
+```
+
+---
+
+### Execution Flow
+
+```
+Start
+ ↓
+Execute code
+ ↓
+Check condition
+ ↓
+If true → repeat
+If false → exit loop
+```
+
+---
+
+# 3️⃣ Difference Between while and do-while
+
+| Feature           | while loop       | do-while loop         |
+| ----------------- | ---------------- | --------------------- |
+| Condition checked | Before execution | After execution       |
+| Minimum execution | 0 times          | At least 1 time       |
+| Syntax            | simpler          | slightly longer       |
+| Use case          | general looping  | menus & input systems |
+
+---
+
+# Example Comparison
+
+### while Loop
+
+```java
+int i = 10;
+
+while(i < 5){
+    System.out.println(i);
+}
+```
+
+Output:
+
+```
+(no output)
+```
+
+Because condition is **false from the start**.
+
+---
+
+### do-while Loop
+
+```java
+int i = 10;
+
+do{
+    System.out.println(i);
+}
+while(i < 5);
+```
+
+Output:
+
+```
+10
+```
+
+Explanation:
+
+```
+Code runs first
+Then condition checked
+```
+
+So it prints **once**.
+
+---
+
+# 4️⃣ At Least One Execution Scenario
+
+Example: **Password attempt system**
+
+```java
+int password = 1234;
+int userInput;
+
+do{
+    System.out.println("Enter password");
+
+    userInput = 1234; // example input
+
+}while(userInput != password);
+
+System.out.println("Login Successful");
+```
+
+Logic:
+
+```
+User must try at least once
+System checks password after input
+```
+
+---
+
+# 5️⃣ Real World Example — Menu Driven Program
+
+This is the **most common use of do-while loop**.
+
+Example:
+
+```
+1 Withdraw
+2 Deposit
+3 Check Balance
+4 Exit
+```
+
+The menu must appear **at least once**.
+
+---
+
+### Java Example
+
+```java
+import java.util.Scanner;
+
+public class ATMMenu {
+
+    public static void main(String[] args){
+
+        Scanner sc = new Scanner(System.in);
+        int choice;
+
+        do{
+
+            System.out.println("1 Withdraw");
+            System.out.println("2 Deposit");
+            System.out.println("3 Check Balance");
+            System.out.println("4 Exit");
+
+            choice = sc.nextInt();
+
+        }while(choice != 4);
+
+        System.out.println("Thank you for using ATM");
+
+    }
+
+}
+```
+
+---
+
+### Program Flow
+
+```
+Show menu
+ ↓
+User chooses option
+ ↓
+If choice != 4 → show menu again
+If choice = 4 → exit
+```
+
+---
+
+# 6️⃣ Another Real Example — Input Validation
+
+Example: User must enter **positive number**.
+
+```java
+import java.util.Scanner;
+
+Scanner sc = new Scanner(System.in);
+
+int number;
+
+do{
+
+    System.out.println("Enter positive number:");
+    number = sc.nextInt();
+
+}while(number <= 0);
+
+System.out.println("Valid number entered");
+```
+
+Explanation:
+
+```
+User input required at least once
+Loop continues until correct input
+```
+
+---
+
+# 7️⃣ Visual Comparison
+
+### while loop flow
+
+```
+Check condition
+ ↓
+True → execute code
+ ↓
+Repeat
+```
+
+---
+
+### do-while flow
+
+```
+Execute code
+ ↓
+Check condition
+ ↓
+True → repeat
+False → stop
+```
+
+---
+
+# 8️⃣ Common Beginner Mistakes
+
+### 1️⃣ Forgetting Semicolon
+
+Wrong
+
+```
+while(condition)
+```
+
+Correct
+
+```
+while(condition);
+```
+
+The semicolon is **mandatory**.
+
+---
+
+### 2️⃣ Infinite Loop
+
+Example:
+
+```java
+int i = 1;
+
+do{
+    System.out.println(i);
+}
+while(i <= 5);
+```
+
+`i` never changes → infinite loop.
+
+Correct:
+
+```java
+i++;
+```
+
+---
+
+### 3️⃣ Wrong Condition
+
+Example:
+
+```java
+while(choice == 4);
+```
+
+This causes **wrong menu logic**.
+
+---
+
+# 9️⃣ Developer Usage of Do-While
+
+Developers use do-while in:
+
+| System        | Usage            |
+| ------------- | ---------------- |
+| ATM machines  | menu system      |
+| Games         | replay option    |
+| Login systems | retry password   |
+| User forms    | input validation |
+| Console apps  | command menus    |
+
+---
+
+# 🔟 When to Use Do-While Loop
+
+Use do-while when:
+
+```
+User must perform action first
+Menu must display once
+Input must be requested first
+```
+
+Example cases:
+
+```
+ATM menu
+Game menu
+Login attempts
+Form input validation
+```
+
+---
+
+# Practice Problems
+
+### Problem 1
+
+Create program that prints numbers **1–5 using do-while loop**.
+
+---
+
+### Problem 2
+
+Create a **menu-driven calculator**.
+
+```
+1 Add
+2 Subtract
+3 Multiply
+4 Exit
+```
+
+Use **do-while loop**.
+
+---
+
+### Problem 3
+
+Ask user to enter number until **number > 10**.
+
+---
+
+### Problem 4
+
+Create program that repeats until user enters **0**.
+
+---
+
+# Summary
+
+| Concept           | Key Idea                             |
+| ----------------- | ------------------------------------ |
+| Do-while loop     | executes first then checks condition |
+| Minimum execution | at least one time                    |
+| Main difference   | while checks first                   |
+| Common use        | menu-driven programs                 |
+| Common error      | forgetting semicolon                 |
+
+---
