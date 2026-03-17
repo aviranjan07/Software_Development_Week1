@@ -182,3 +182,34 @@ public class Week1 {
         input.close();
     }
 } */
+
+    // out put
+/* public class Week1 {
+
+    public static void main(String[] args) {
+        // type one
+        System.out.print("Hello World");
+        //type two 
+        System.out.println("Hello World");
+        //  type three
+        System.out.print("Hello World, \n my name is aviranjan");
+        
+    }
+}   */
+// print this pattern 
+/*
+*
+**
+***
+****
+*/
+/* public class Week1 {
+  public static void main(String[] args) {
+    System.out.println("*");
+    System.out.println("* * ");
+    System.out.println("* * *");
+    System.out.println("* * * *");
+
+  }
+    
+} */
