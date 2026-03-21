@@ -7,10 +7,20 @@
 }
  */
   //Store String 
- public class ArrayBasics {
+ /* public class ArrayBasics {
 
     public static void main(String[] args) {
         String[] name = {"Aviranjan", "Rahul", "Ashim"};
         System.out.println(name[2]);
     }
-}
+} */
+   
+    // Change an Array Element 
+/*  public class ArrayBasics {
+
+    public static void main(String[] args) {
+        String[] name = {"Aviranjan", "Rahul", "Ashim"};
+            name[0] = "Ayan";
+        System.out.println(name[0]);
+    }
+} */
