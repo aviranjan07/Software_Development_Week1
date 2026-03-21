@@ -24,12 +24,3 @@
         System.out.println(name[0]);
     }
 } */
-
-    public class ArrayBasics {
-    public static void main(String[] args) {
-        int[] Number = {10, 20, 30, 40};
-        Number[1] = 100;
-        System.out.println(Number[1]);
-    }
-        
-    }
