@@ -44,7 +44,7 @@
 } */
 
     // Array Loops
-public class ArrayBasics {
+/* public class ArrayBasics {
 
     public static void main(String[] args) {
         String[] name = {"apple", "banana", "orange",};
@@ -52,4 +52,17 @@ public class ArrayBasics {
             System.out.println(i);
         }
     }
-}    
+}     */
+
+    // Create an array of 5 numbers and print them.
+/* public class ArrayBasics {
+
+    public static void main(String[] args) {
+        int[] arr = {10, 20, 30, 40, 50, 60};
+        for(int i = 0; i < arr.length; i++){
+          System.out.println(arr[i]);
+
+        }
+        
+    }
+}   */  
