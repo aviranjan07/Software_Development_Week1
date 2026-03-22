@@ -6,16 +6,16 @@
     }
 }
  */
-  //Store String 
- /* public class ArrayBasics {
+//Store String 
+/* public class ArrayBasics {
 
-    public static void main(String[] args) {
-        String[] name = {"Aviranjan", "Rahul", "Ashim"};
-        System.out.println(name[2]);
-    }
+   public static void main(String[] args) {
+       String[] name = {"Aviranjan", "Rahul", "Ashim"};
+       System.out.println(name[2]);
+   }
 } */
-   
-    // Change an Array Element 
+
+// Change an Array Element 
 /*  public class ArrayBasics {
 
     public static void main(String[] args) {
@@ -25,14 +25,14 @@
     }
 } */
 
-    /* public class ArrayBasics {
-    public static void main(String[] args) {
-        int[] Number = {10, 20, 30, 40};
-        Number[1] = 100;
-        System.out.println(Number[1]);
-    }
-        
-    } */
+/* public class ArrayBasics {
+public static void main(String[] args) {
+    int[] Number = {10, 20, 30, 40};
+    Number[1] = 100;
+    System.out.println(Number[1]);
+}
+    
+} */
 //    Array length
 /* public class ArrayBasics {
 
@@ -43,7 +43,7 @@
     }
 } */
 
-    // Array Loops
+// Array Loops
 /* public class ArrayBasics {
 
     public static void main(String[] args) {
@@ -54,7 +54,7 @@
     }
 }     */
 
-    // Create an array of 5 numbers and print them.
+// Create an array of 5 numbers and print them.
 /* public class ArrayBasics {
 
     public static void main(String[] args) {
@@ -65,4 +65,21 @@
         }
         
     }
-}   */  
+}   */
+
+// Find the largest number in an array.
+
+/* public class ArrayBasics {
+
+    public static void main(String[] args) {
+        int[] arr = { 50, 80, 120, 180 };
+        int largest = arr[0];
+        for (int i = 0; i < arr.length; i++) {
+            if (arr[i] > largest) {
+                largest = arr[i];
+            }
+
+        }
+        System.out.println("the largest number of an Array is " + largest);
+    }
+} */
