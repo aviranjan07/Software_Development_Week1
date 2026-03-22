@@ -55,10 +55,10 @@ Modern JavaScript thinking (used in React & real apps)
 Avoiding hidden bugs and writing safer code
 
 💡 Built Practice Projects:
-✔ To-do List Manager
-✔ Contact Book
-✔ Word Frequency Counter
-✔ Product Filter System
+- To-do List Manager
+- Contact Book
+- Word Frequency Counter
+- Product Filter System
 
 ## Technologies
 - Java
