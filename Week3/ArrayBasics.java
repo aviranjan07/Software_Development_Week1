@@ -42,3 +42,14 @@
 
     }
 } */
+
+    // Array Loops
+public class ArrayBasics {
+
+    public static void main(String[] args) {
+        String[] name = {"apple", "banana", "orange",};
+        for(int i = 1; i <= name.length;i++) {
+            System.out.println(i);
+        }
+    }
+}    
