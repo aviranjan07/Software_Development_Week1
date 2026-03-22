@@ -84,7 +84,7 @@ public static void main(String[] args) {
     }
 } */
 
-    // Count even and odd numbers.
+// Count even and odd numbers.
 
 /* public class ArrayBasics {
 
@@ -103,4 +103,29 @@ public static void main(String[] args) {
             System.out.println("EvenCount " + evenCount);
             System.out.println("oddCount " + oddCount);
     }
-}  */   
+}  */
+
+//Reverse an array.
+
+/* public class ArrayBasics {
+
+    public static void main(String[] args) {
+        int[] arr = { 10, 20, 30, 40, 50 };
+
+        int start = 0;
+        int end = arr.length - 1;
+
+        while (start < end) {
+            int temp = arr[start];
+            arr[start] = arr[end];
+            arr[end] = temp;
+
+            start++;
+            end--;
+        }
+        for (int num : arr) {
+            System.out.println(num + "");
+        }
+    }
+}
+ */
