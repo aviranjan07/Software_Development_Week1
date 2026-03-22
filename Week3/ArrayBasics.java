@@ -129,3 +129,84 @@ public static void main(String[] args) {
     }
 }
  */
+
+/* import java.util.Scanner;
+
+public class ArrayBasics {
+    public static void main(String[] args) {
+
+        Scanner sc = new Scanner(System.in);
+
+        int[] marks = new int[100]; // max 100 students
+        int size = 0; // current number of students
+
+        while (true) {
+            System.out.println("\n--- Student Marks System ---");
+            System.out.println("1. Insert Marks");
+            System.out.println("2. Update Marks");
+            System.out.println("3. Delete Marks");
+            System.out.println("4. Display All Marks");
+            System.out.println("5. Exit");
+
+            System.out.print("Enter choice: ");
+            int choice = sc.nextInt();
+
+            switch (choice) {
+
+                // 1️⃣ Insert
+                case 1:
+                    System.out.print("Enter marks: ");
+                    marks[size] = sc.nextInt();
+                    size++;
+                    System.out.println("Marks inserted!");
+                    break;
+
+                // 2️⃣ Update
+                case 2:
+                    System.out.print("Enter index to update: ");
+                    int uIndex = sc.nextInt();
+
+                    if (uIndex >= 0 && uIndex < size) {
+                        System.out.print("Enter new marks: ");
+                        marks[uIndex] = sc.nextInt();
+                        System.out.println("Marks updated!");
+                    } else {
+                        System.out.println("Invalid index!");
+                    }
+                    break;
+
+                // 3️⃣ Delete
+                case 3:
+                    System.out.print("Enter index to delete: ");
+                    int dIndex = sc.nextInt();
+
+                    if (dIndex >= 0 && dIndex < size) {
+                        for (int i = dIndex; i < size - 1; i++) {
+                            marks[i] = marks[i + 1]; // shift left
+                        }
+                        size--;
+                        System.out.println("Marks deleted!");
+                    } else {
+                        System.out.println("Invalid index!");
+                    }
+                    break;
+
+                // 4️⃣ Display
+                case 4:
+                    System.out.println("All Marks:");
+                    for (int i = 0; i < size; i++) {
+                        System.out.println("Student " + i + ": " + marks[i]);
+                    }
+                    break;
+
+                // 5️⃣ Exit
+                case 5:
+                    System.out.println("Exiting...");
+                    return;
+
+                default:
+                    System.out.println("Invalid choice!");
+            }
+        }
+    }
+} */
