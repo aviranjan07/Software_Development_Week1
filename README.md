@@ -22,7 +22,7 @@ Topics covered:
 - Tracing & Dry Run techniques for better debugging
 - Basic Input Validation for real-world programs
 
-## Week 2
+## Week 3
 
 - Array Operations (CRUD Thinking)
 Learned how real systems manage data (Create, Read, Update, Delete)
