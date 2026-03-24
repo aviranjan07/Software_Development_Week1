@@ -1,0 +1,490 @@
+Control statements help the program **decide what to do and how many times to do it**.
+
+There are mainly **two types** you asked about:
+
+1️⃣ **Decision making (if, else)**
+2️⃣ **Loops (repeat actions)**
+
+---
+
+# 1. What Are Control Statements?
+
+Normally a program runs **line by line from top to bottom**.
+
+Example:
+
+```java
+System.out.println("Start");
+System.out.println("Hello");
+System.out.println("End");
+```
+
+Output
+
+```
+Start
+Hello
+End
+```
+
+But sometimes a program must:
+
+* make **decisions**
+* **repeat tasks**
+
+That is where **control statements** are used.
+
+So:
+
+**Control Statements = tools that control the flow of a program.**
+
+---
+
+# 2. if Statement
+
+## Simple Idea
+
+The **if statement checks a condition**.
+
+If the condition is **true**, the code runs.
+
+If the condition is **false**, the code is skipped.
+
+---
+
+## Real Life Example
+
+Imagine a rule:
+
+```
+If it rains → take an umbrella
+```
+
+If it does not rain → do nothing.
+
+---
+
+## Java Syntax
+
+```java
+if(condition)
+{
+   code
+}
+```
+
+---
+
+## Example
+
+```java
+int age = 20;
+
+if(age >= 18)
+{
+    System.out.println("You are an adult");
+}
+```
+
+Output
+
+```
+You are an adult
+```
+
+Because **20 ≥ 18 is true**.
+
+---
+
+# 3. if–else Statement
+
+Sometimes we want **two possibilities**.
+
+Example:
+
+```
+If age ≥ 18 → Adult
+Else → Minor
+```
+
+---
+
+## Syntax
+
+```java
+if(condition)
+{
+   code1
+}
+else
+{
+   code2
+}
+```
+
+---
+
+## Example Program
+
+```java
+int age = 15;
+
+if(age >= 18)
+{
+    System.out.println("Adult");
+}
+else
+{
+    System.out.println("Minor");
+}
+```
+
+Output
+
+```
+Minor
+```
+
+Because **15 < 18**.
+
+---
+
+# 4. else if (Multiple Conditions)
+
+Sometimes we need **many conditions**.
+
+Example grading system:
+
+```
+Marks ≥ 90 → Grade A
+Marks ≥ 70 → Grade B
+Marks ≥ 50 → Grade C
+Else → Fail
+```
+
+---
+
+## Syntax
+
+```java
+if(condition1)
+{
+}
+else if(condition2)
+{
+}
+else
+{
+}
+```
+
+---
+
+## Example
+
+```java
+int marks = 75;
+
+if(marks >= 90)
+{
+    System.out.println("Grade A");
+}
+else if(marks >= 70)
+{
+    System.out.println("Grade B");
+}
+else if(marks >= 50)
+{
+    System.out.println("Grade C");
+}
+else
+{
+    System.out.println("Fail");
+}
+```
+
+Output
+
+```
+Grade B
+```
+
+---
+
+# 5. Loops
+
+## Simple Meaning
+
+A **loop repeats code again and again**.
+
+Example:
+
+Instead of writing:
+
+```java
+System.out.println("Hello");
+System.out.println("Hello");
+System.out.println("Hello");
+System.out.println("Hello");
+System.out.println("Hello");
+```
+
+We use a **loop**.
+
+---
+
+# 6. for Loop
+
+Used when we **know how many times to repeat**.
+
+---
+
+## Syntax
+
+```java
+for(initialization; condition; update)
+{
+   code
+}
+```
+
+---
+
+## Example
+
+```java
+for(int i = 1; i <= 5; i++)
+{
+    System.out.println("Hello");
+}
+```
+
+Output
+
+```
+Hello
+Hello
+Hello
+Hello
+Hello
+```
+
+Explanation:
+
+| Part   | Meaning       |
+| ------ | ------------- |
+| i = 1  | start         |
+| i <= 5 | condition     |
+| i++    | increase by 1 |
+
+---
+
+## Printing Numbers Example
+
+```java
+for(int i = 1; i <= 10; i++)
+{
+    System.out.println(i);
+}
+```
+
+Output
+
+```
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+```
+
+---
+
+# 7. while Loop
+
+Used when we **do not know exact repetitions**, but we check a condition.
+
+---
+
+## Syntax
+
+```java
+while(condition)
+{
+   code
+}
+```
+
+---
+
+## Example
+
+```java
+int i = 1;
+
+while(i <= 5)
+{
+    System.out.println(i);
+    i++;
+}
+```
+
+Output
+
+```
+1
+2
+3
+4
+5
+```
+
+---
+
+# 8. do–while Loop
+
+This loop **runs at least one time**, even if the condition is false.
+
+---
+
+## Syntax
+
+```java
+do
+{
+   code
+}
+while(condition);
+```
+
+---
+
+## Example
+
+```java
+int i = 1;
+
+do
+{
+    System.out.println(i);
+    i++;
+}
+while(i <= 5);
+```
+
+Output
+
+```
+1
+2
+3
+4
+5
+```
+
+---
+
+# 9. Difference Between Loops
+
+| Loop          | When Used                          |
+| ------------- | ---------------------------------- |
+| for loop      | when repetitions are known         |
+| while loop    | when condition controls repetition |
+| do-while loop | must run at least once             |
+
+---
+
+# 10. Real Life Loop Example
+
+Imagine telling a child:
+
+```
+Write numbers from 1 to 10
+```
+
+Without loops:
+
+```
+Write 1
+Write 2
+Write 3
+Write 4
+...
+```
+
+With loop:
+
+```
+Repeat writing numbers until 10
+```
+
+That is exactly what loops do in programming.
+
+---
+
+# Final Simple Summary
+
+### if
+
+Runs code **only if condition is true**
+
+```
+if(condition)
+```
+
+---
+
+### if–else
+
+Two choices
+
+```
+if(condition)
+else
+```
+
+---
+
+### for loop
+
+Repeat **specific number of times**
+
+```
+for(i=1;i<=10;i++)
+```
+
+---
+
+### while loop
+
+Repeat **while condition is true**
+
+```
+while(condition)
+```
+
+---
+
+### do-while
+
+Run **at least once**
+
+```
+do {} while(condition)
+```
+
+---
+
+✅ **In simple words**
+
+Control statements allow programs to:
+
+* **Decide (if, else)**
+* **Repeat tasks (loops)**
+
+---
