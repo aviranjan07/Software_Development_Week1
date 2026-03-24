@@ -1,0 +1,263 @@
+# 1. Multi Cursor Editing
+
+## What is Multi Cursor?
+
+**Multi-cursor editing lets you type in multiple places at the same time.**
+
+Instead of editing lines **one by one**, you can edit **many lines together**.
+
+---
+
+## Example
+
+Before editing:
+
+```java
+int a = 10;
+int b = 20;
+int c = 30;
+```
+
+You want to change `int` to `double`.
+
+Instead of editing 3 lines manually, use **multi cursor**.
+
+After editing:
+
+```java
+double a = 10;
+double b = 20;
+double c = 30;
+```
+
+---
+
+## Useful Multi Cursor Shortcuts (VS Code)
+
+| Shortcut            | Function            |
+| ------------------- | ------------------- |
+| **Alt + Click**     | Add cursor anywhere |
+| **Ctrl + Alt + ↓**  | Add cursor below    |
+| **Ctrl + Alt + ↑**  | Add cursor above    |
+| **Shift + Alt + ↓** | Duplicate line      |
+
+---
+
+## Why It’s Useful
+
+Multi cursor helps when:
+
+* Renaming variables
+* Editing repeated lines
+* Updating similar code blocks
+
+It can make coding **3–5× faster**.
+
+---
+
+# 2. Auto Format (Clean Code Automatically)
+
+Auto formatting makes your code **clean and properly structured**.
+
+Example of messy code:
+
+```java
+public class Main{public static void main(String[]args){int a=10;int b=20;System.out.println(a+b);}}
+```
+
+Using **auto format**, it becomes:
+
+```java
+public class Main {
+
+    public static void main(String[] args) {
+
+        int a = 10;
+        int b = 20;
+
+        System.out.println(a + b);
+
+    }
+
+}
+```
+
+---
+
+## Shortcut
+
+| Shortcut            | Function           |
+| ------------------- | ------------------ |
+| **Shift + Alt + F** | Format entire code |
+
+This automatically fixes:
+
+* indentation
+* spacing
+* structure
+
+---
+
+# 3. Quick Run Shortcut
+
+Running programs quickly saves time.
+
+Instead of using the mouse every time.
+
+---
+
+## VS Code Java Run Options
+
+### Option 1 (Run Button)
+
+Click **Run ▶ button** above the code.
+
+---
+
+### Option 2 (Keyboard Shortcut)
+
+| Shortcut      | Function           |
+| ------------- | ------------------ |
+| **Ctrl + F5** | Run program        |
+| **F5**        | Run with debugging |
+
+---
+
+Example program:
+
+```java
+public class Main {
+    public static void main(String[] args) {
+
+        System.out.println("Hello Java");
+
+    }
+}
+```
+
+Press **Ctrl + F5** → program runs instantly.
+
+---
+
+# 4. File Navigation
+
+When projects become large, finding files quickly is important.
+
+VS Code provides **fast navigation shortcuts**.
+
+---
+
+## Open Any File Quickly
+
+Shortcut:
+
+| Shortcut     | Function              |
+| ------------ | --------------------- |
+| **Ctrl + P** | Search and open files |
+
+Example:
+
+Press **Ctrl + P** → type:
+
+```
+Main.java
+```
+
+File opens instantly.
+
+---
+
+## Go to Specific Line
+
+Shortcut:
+
+| Shortcut     | Function          |
+| ------------ | ----------------- |
+| **Ctrl + G** | Go to line number |
+
+Example:
+
+Type:
+
+```
+50
+```
+
+Cursor jumps to **line 50**.
+
+---
+
+## Find Code in File
+
+Shortcut:
+
+| Shortcut     | Function  |
+| ------------ | --------- |
+| **Ctrl + F** | Find text |
+
+Example:
+
+Search:
+
+```
+System.out
+```
+
+---
+
+## Search in Whole Project
+
+Shortcut:
+
+| Shortcut             | Function          |
+| -------------------- | ----------------- |
+| **Ctrl + Shift + F** | Search in project |
+
+Useful for large codebases.
+
+---
+
+# 5. Why Keyboard Speed Matters
+
+Professional developers use the keyboard because:
+
+* Faster than mouse
+* Keeps coding flow smooth
+* Reduces interruptions
+* Improves productivity
+
+Many developers rarely touch the mouse.
+
+---
+
+# 6. The 5 Most Important VS Code Shortcuts
+
+If you remember only a few, remember these:
+
+| Shortcut            | Use               |
+| ------------------- | ----------------- |
+| **Ctrl + S**        | Save file         |
+| **Ctrl + /**        | Comment line      |
+| **Ctrl + P**        | Open file quickly |
+| **Shift + Alt + F** | Format code       |
+| **Ctrl + `**        | Open terminal     |
+
+These alone make coding **much easier**.
+
+---
+
+# Final Idea
+
+**Keyboard Coding Speed + IDE Comfort = Faster Programming**
+
+Key skills:
+
+* Multi-cursor editing
+* Auto formatting
+* Quick run shortcuts
+* Fast file navigation
+
+These tools help programmers **focus on logic instead of struggling with the editor**.
+
+---
+
