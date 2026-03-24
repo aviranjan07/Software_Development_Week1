@@ -1,0 +1,321 @@
+# 1. What is Logic in Programming?
+
+**Logic means the step-by-step instructions to solve a problem.**
+
+Before writing code, a programmer first thinks:
+
+> "How should the computer solve this problem?"
+
+Example problem:
+
+Add two numbers.
+
+Logic:
+
+1. Take first number
+2. Take second number
+3. Add them
+4. Show result
+
+Then we convert the logic into code.
+
+---
+
+# 2. Structure of Simple Programming Logic
+
+Most simple programs follow this structure:
+
+```
+Input → Process → Output
+```
+
+Example:
+
+| Step    | Example              |
+| ------- | -------------------- |
+| Input   | User enters numbers  |
+| Process | Program adds numbers |
+| Output  | Result is displayed  |
+
+---
+
+# 3. Example 1: Add Two Numbers
+
+### Logic
+
+1. Start
+2. Take two numbers
+3. Add them
+4. Print result
+5. End
+
+### Java Code
+
+```java
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+
+        Scanner sc = new Scanner(System.in);
+
+        System.out.println("Enter first number:");
+        int a = sc.nextInt();
+
+        System.out.println("Enter second number:");
+        int b = sc.nextInt();
+
+        int sum = a + b;
+
+        System.out.println("Sum = " + sum);
+
+    }
+}
+```
+
+---
+
+# 4. Example 2: Find Even or Odd Number
+
+### Logic
+
+1. Take a number
+2. Divide it by 2
+3. If remainder = 0 → Even
+4. Otherwise → Odd
+
+### Java Code
+
+```java
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+
+        Scanner sc = new Scanner(System.in);
+
+        System.out.println("Enter a number:");
+        int num = sc.nextInt();
+
+        if(num % 2 == 0)
+        {
+            System.out.println("Even Number");
+        }
+        else
+        {
+            System.out.println("Odd Number");
+        }
+
+    }
+}
+```
+
+Explanation:
+
+```
+%  → modulus operator
+```
+
+It finds the **remainder**.
+
+Example:
+
+```
+10 % 2 = 0
+```
+
+So it is **even**.
+
+---
+
+# 5. Example 3: Find Largest Number
+
+### Logic
+
+1. Take two numbers
+2. Compare them
+3. If first number > second → first is largest
+4. Otherwise → second is largest
+
+### Java Code
+
+```java
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+
+        Scanner sc = new Scanner(System.in);
+
+        int a = sc.nextInt();
+        int b = sc.nextInt();
+
+        if(a > b)
+        {
+            System.out.println("A is largest");
+        }
+        else
+        {
+            System.out.println("B is largest");
+        }
+
+    }
+}
+```
+
+---
+
+# 6. Example 4: Print Numbers from 1 to 10
+
+### Logic
+
+1. Start from 1
+2. Print number
+3. Increase number
+4. Repeat until 10
+
+### Java Code
+
+```java
+public class Main {
+    public static void main(String[] args) {
+
+        for(int i = 1; i <= 10; i++)
+        {
+            System.out.println(i);
+        }
+
+    }
+}
+```
+
+Output:
+
+```
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+```
+
+---
+
+# 7. Example 5: Sum of Numbers from 1 to 10
+
+### Logic
+
+1. Start with sum = 0
+2. Take numbers from 1 to 10
+3. Add each number to sum
+4. Print sum
+
+### Java Code
+
+```java
+public class Main {
+    public static void main(String[] args) {
+
+        int sum = 0;
+
+        for(int i = 1; i <= 10; i++)
+        {
+            sum = sum + i;
+        }
+
+        System.out.println("Sum = " + sum);
+
+    }
+}
+```
+
+Output
+
+```
+Sum = 55
+```
+
+---
+
+# 8. How Programmers Think (Very Important)
+
+Programmers always follow **three thinking steps**.
+
+### Step 1: Understand the Problem
+
+Example:
+
+Find the largest number.
+
+---
+
+### Step 2: Write the Logic (Steps)
+
+```
+Take two numbers
+Compare them
+Print largest
+```
+
+---
+
+### Step 3: Convert Logic to Code
+
+```java
+if(a > b)
+```
+
+---
+
+# 9. Real-Life Logic Example
+
+Problem:
+
+ATM Withdrawal
+
+Logic:
+
+```
+Insert card
+Enter PIN
+If PIN correct
+    show menu
+Else
+    show error
+```
+
+This is **programming logic used in real machines**.
+
+---
+
+# 10. Beginner Secret
+
+Most beginners think programming is:
+
+❌ remembering code
+
+But actually programming is:
+
+✅ **thinking logically**
+
+Good programmers spend **more time thinking than typing code**.
+
+---
+
+# Final Simple Definition
+
+**Programming Logic = Step-by-step thinking used to solve problems with code.**
+
+Structure of most programs:
+
+```
+Input → Logic (Process) → Output
+```
+
+---
+
