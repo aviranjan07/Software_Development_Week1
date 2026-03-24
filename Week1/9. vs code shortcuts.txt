@@ -1,0 +1,165 @@
+# 1. File & Window Shortcuts
+
+| Shortcut             | Function             |
+| -------------------- | -------------------- |
+| **Ctrl + N**         | New file             |
+| **Ctrl + O**         | Open file            |
+| **Ctrl + S**         | Save file            |
+| **Ctrl + Shift + S** | Save as              |
+| **Ctrl + W**         | Close file           |
+| **Ctrl + Shift + N** | New window           |
+| **Ctrl + Tab**       | Switch between files |
+
+---
+
+# 2. Editing Shortcuts
+
+These help **edit code faster**.
+
+| Shortcut     | Function   |
+| ------------ | ---------- |
+| **Ctrl + C** | Copy       |
+| **Ctrl + V** | Paste      |
+| **Ctrl + X** | Cut        |
+| **Ctrl + Z** | Undo       |
+| **Ctrl + Y** | Redo       |
+| **Ctrl + A** | Select all |
+
+---
+
+# 3. Line Editing Shortcuts
+
+Very useful while coding.
+
+| Shortcut             | Function                 |
+| -------------------- | ------------------------ |
+| **Ctrl + /**         | Comment / Uncomment line |
+| **Alt + ↑ / ↓**      | Move line up or down     |
+| **Shift + Alt + ↓**  | Duplicate line           |
+| **Ctrl + Shift + K** | Delete line              |
+| **Home**             | Go to start of line      |
+| **End**              | Go to end of line        |
+
+Example:
+
+Before:
+
+```
+int a = 10;
+```
+
+Press **Shift + Alt + ↓**
+
+After:
+
+```
+int a = 10;
+int a = 10;
+```
+
+---
+
+# 4. Multi Cursor Editing
+
+Very powerful feature.
+
+| Shortcut           | Function             |
+| ------------------ | -------------------- |
+| **Alt + Click**    | Add multiple cursors |
+| **Ctrl + Alt + ↓** | Add cursor below     |
+| **Ctrl + Alt + ↑** | Add cursor above     |
+
+Example:
+
+You can edit **multiple lines at once**.
+
+---
+
+# 5. Navigation Shortcuts
+
+Helps move quickly in code.
+
+| Shortcut             | Function          |
+| -------------------- | ----------------- |
+| **Ctrl + F**         | Find              |
+| **Ctrl + H**         | Replace           |
+| **Ctrl + G**         | Go to line        |
+| **Ctrl + P**         | Quick open file   |
+| **Ctrl + Shift + F** | Search in project |
+
+---
+
+# 6. Code Intelligence
+
+Very helpful for programming.
+
+| Shortcut             | Function         |
+| -------------------- | ---------------- |
+| **Ctrl + Space**     | Show suggestions |
+| **F12**              | Go to definition |
+| **Alt + F12**        | Peek definition  |
+| **Ctrl + Shift + O** | Go to symbol     |
+
+---
+
+# 7. Terminal Shortcuts
+
+For running programs.
+
+| Shortcut             | Function             |
+| -------------------- | -------------------- |
+| **Ctrl + `**         | Open terminal        |
+| **Ctrl + Shift + `** | New terminal         |
+| **Ctrl + C**         | Stop running program |
+
+---
+
+# 8. Formatting Code
+
+| Shortcut             | Function        |
+| -------------------- | --------------- |
+| **Shift + Alt + F**  | Format code     |
+| **Ctrl + Shift + P** | Command palette |
+
+---
+
+# 9. Java Coding Shortcut
+
+If Java extension is installed:
+
+Type:
+
+```
+psvm
+```
+
+Then press **Tab**
+
+It expands to:
+
+```java
+public static void main(String[] args) {
+
+}
+```
+
+---
+
+# 10. Most Important 10 Shortcuts (Remember These)
+
+These are used **90% of the time**.
+
+| Shortcut         | Use             |
+| ---------------- | --------------- |
+| Ctrl + S         | Save            |
+| Ctrl + /         | Comment         |
+| Ctrl + F         | Find            |
+| Ctrl + H         | Replace         |
+| Ctrl + `         | Open terminal   |
+| Ctrl + Space     | Code suggestion |
+| Alt + ↑ / ↓      | Move line       |
+| Shift + Alt + ↓  | Duplicate line  |
+| Ctrl + Shift + K | Delete line     |
+| Ctrl + P         | Quick open file |
+
+---
