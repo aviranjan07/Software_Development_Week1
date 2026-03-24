@@ -1,0 +1,319 @@
+I will explain **Basic Console Interaction** in a **simple beginner-friendly way**, because when programming you often interact with the **console (terminal)** to run programs and understand errors.
+
+We will cover:
+
+1️⃣ **Reading error messages**
+2️⃣ **Running program from terminal**
+3️⃣ **Understanding output logs**
+
+---
+
+# 1. Reading Error Messages
+
+## What is an Error Message?
+
+An **error message** is a message shown by the compiler or program when something goes wrong.
+
+It helps you **find the problem in your code**.
+
+Example error message:
+
+```text
+error: ';' expected
+```
+
+This means **you forgot a semicolon ( ; )**.
+
+---
+
+## Example Code With Error
+
+```java
+public class Main {
+    public static void main(String[] args) {
+
+        System.out.println("Hello")
+
+    }
+}
+```
+
+Error message:
+
+```text
+';' expected
+```
+
+Problem:
+
+```text
+System.out.println("Hello")
+```
+
+Missing **;**
+
+Correct code:
+
+```java
+System.out.println("Hello");
+```
+
+---
+
+## How to Read Error Messages
+
+Error messages usually show:
+
+1️⃣ **Type of error**
+2️⃣ **File name**
+3️⃣ **Line number**
+
+Example:
+
+```text
+Main.java:5: error: ';' expected
+```
+
+Meaning:
+
+* File → `Main.java`
+* Line → `5`
+* Problem → Missing semicolon
+
+So you go directly to **line 5**.
+
+---
+
+# 2. Running Program From Terminal
+
+Programs can run directly from the **terminal / console**.
+
+The terminal is a place where you type commands to run programs.
+
+---
+
+## Step 1: Compile the Java Program
+
+Command:
+
+```bash
+javac Main.java
+```
+
+What this does:
+
+* Converts **Java code** into **bytecode**
+* Creates a file:
+
+```text
+Main.class
+```
+
+---
+
+## Step 2: Run the Program
+
+Command:
+
+```bash
+java Main
+```
+
+Output example:
+
+```text
+Hello World
+```
+
+---
+
+## Example Full Process
+
+File: `Main.java`
+
+```java
+public class Main {
+    public static void main(String[] args) {
+
+        System.out.println("Java Program Running");
+
+    }
+}
+```
+
+Terminal commands:
+
+```bash
+javac Main.java
+java Main
+```
+
+Output:
+
+```text
+Java Program Running
+```
+
+---
+
+# 3. Understanding Output Logs
+
+## What Are Output Logs?
+
+**Logs are messages printed by the program to show what is happening.**
+
+They help programmers:
+
+* Check program behavior
+* Debug problems
+* Track execution
+
+Example program:
+
+```java
+public class Main {
+    public static void main(String[] args) {
+
+        System.out.println("Program Started");
+
+        int a = 10;
+        int b = 5;
+
+        System.out.println("Adding numbers");
+
+        int sum = a + b;
+
+        System.out.println("Result = " + sum);
+
+        System.out.println("Program Finished");
+
+    }
+}
+```
+
+Output logs:
+
+```text
+Program Started
+Adding numbers
+Result = 15
+Program Finished
+```
+
+These messages show the **flow of the program**.
+
+---
+
+## Why Logs Are Useful
+
+Logs help you see:
+
+* Where the program started
+* Which step is running
+* Where the problem occurs
+
+Example debugging log:
+
+```text
+Reading input
+Calculating result
+Error occurred
+```
+
+Now you know the error happened **after calculation started**.
+
+---
+
+# 4. Example: Console Interaction With Input
+
+Program:
+
+```java
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+
+        Scanner sc = new Scanner(System.in);
+
+        System.out.println("Enter number:");
+
+        int number = sc.nextInt();
+
+        System.out.println("You entered: " + number);
+
+    }
+}
+```
+
+Console interaction:
+
+```text
+Enter number:
+5
+You entered: 5
+```
+
+The console allows **communication between user and program**.
+
+---
+
+# 5. Simple Flow of Console Interaction
+
+```text
+Write program
+      ↓
+Compile program
+      ↓
+Run program
+      ↓
+Program prints output
+      ↓
+If error occurs → read error message
+```
+
+---
+
+# Final Simple Summary
+
+### 1. Reading Error Messages
+
+Helps find problems in code.
+
+Example:
+
+```text
+';' expected
+```
+
+---
+
+### 2. Running Program From Terminal
+
+Commands:
+
+```bash
+javac Main.java
+java Main
+```
+
+---
+
+### 3. Understanding Output Logs
+
+Logs show what the program is doing.
+
+Example:
+
+```text
+Program started
+Processing data
+Result = 20
+```
+
+---
+
+✅ Important skill for programmers:
+
+> **Always read the console carefully.
+> Most debugging clues are written there.**
