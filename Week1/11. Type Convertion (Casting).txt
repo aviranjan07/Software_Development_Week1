@@ -1,0 +1,351 @@
+I will explain **Type Conversion (Casting) in Java** in a **very simple way**, covering:
+
+1️⃣ **String → Number**
+2️⃣ **Number → String**
+3️⃣ **Implicit & Explicit Conversion**
+
+---
+
+# 1. What is Type Conversion (Casting)?
+
+**Type Conversion means changing one data type into another data type.**
+
+Example:
+
+```id="n3c0b9"
+"25"  →  25
+```
+
+or
+
+```id="f1y9aa"
+25  →  "25"
+```
+
+Why we need it?
+
+Sometimes data comes as **text (String)** but we need **numbers for calculations**.
+
+Example:
+
+User enters:
+
+```id="t1hl0m"
+"10"
+"20"
+```
+
+If we add them as strings:
+
+```id="7y18af"
+"10" + "20" = "1020"
+```
+
+But if we convert them to numbers:
+
+```id="m63i7a"
+10 + 20 = 30
+```
+
+---
+
+# 2. String → Number Conversion
+
+This is very common when **taking input**.
+
+Java provides methods like:
+
+| Method               | Converts To |
+| -------------------- | ----------- |
+| Integer.parseInt()   | int         |
+| Double.parseDouble() | double      |
+| Float.parseFloat()   | float       |
+| Long.parseLong()     | long        |
+
+---
+
+## Example: String to Integer
+
+```java id="j1x1tn"
+String num = "25";
+
+int number = Integer.parseInt(num);
+
+System.out.println(number + 5);
+```
+
+Output
+
+```id="1q6p37"
+30
+```
+
+Explanation:
+
+```id="h5hizd"
+"25" → 25
+```
+
+Then calculation happens.
+
+---
+
+## Example: String to Double
+
+```java id="y7o33m"
+String price = "10.5";
+
+double p = Double.parseDouble(price);
+
+System.out.println(p + 2);
+```
+
+Output
+
+```id="s6xvcl"
+12.5
+```
+
+---
+
+# 3. Number → String Conversion
+
+Sometimes we need to convert numbers to text.
+
+Java uses:
+
+```id="ncth7o"
+String.valueOf()
+```
+
+or
+
+```id="rs36og"
+Integer.toString()
+```
+
+---
+
+## Example: Number to String
+
+```java id="2hujkm"
+int number = 50;
+
+String text = String.valueOf(number);
+
+System.out.println(text);
+```
+
+Output
+
+```id="bo4q5j"
+50
+```
+
+---
+
+## Example: Number to String Using Concatenation
+
+```java id="ow1z31"
+int age = 20;
+
+String text = age + "";
+```
+
+Now `text` becomes a **string**.
+
+---
+
+# 4. Implicit Type Conversion (Automatic)
+
+Also called **Widening Conversion**.
+
+Java automatically converts **smaller data types into larger data types**.
+
+Example:
+
+```id="r6xqv6"
+int → double
+```
+
+---
+
+## Example
+
+```java id="3m4pud"
+int a = 10;
+
+double b = a;
+
+System.out.println(b);
+```
+
+Output
+
+```id="tpxnbo"
+10.0
+```
+
+Java automatically converts **int → double**.
+
+No extra code needed.
+
+---
+
+## Implicit Conversion Order
+
+Java converts like this:
+
+```id="hzjeql"
+byte → short → int → long → float → double
+```
+
+Example:
+
+```id="hcr4aw"
+int → double
+```
+
+Allowed automatically.
+
+---
+
+# 5. Explicit Type Conversion (Manual)
+
+Also called **Narrowing Conversion**.
+
+This happens when converting **larger data types into smaller ones**.
+
+Java **does NOT allow this automatically**.
+
+You must force it.
+
+This is called **casting**.
+
+---
+
+## Syntax
+
+```id="0iqi1u"
+(dataType) value
+```
+
+---
+
+## Example
+
+```java id="9ag8nu"
+double price = 10.5;
+
+int p = (int) price;
+
+System.out.println(p);
+```
+
+Output
+
+```id="uw9r97"
+10
+```
+
+Explanation:
+
+```id="3pjx3e"
+10.5 → 10
+```
+
+Decimal part is **removed**.
+
+---
+
+# 6. Example Combining Everything
+
+```java id="j1g7yb"
+public class Main {
+    public static void main(String[] args) {
+
+        String num = "50";
+
+        int number = Integer.parseInt(num);
+
+        double value = number;
+
+        int result = (int)value;
+
+        String text = String.valueOf(result);
+
+        System.out.println(text);
+
+    }
+}
+```
+
+Flow:
+
+```id="2pdtnn"
+"50" → 50 → 50.0 → 50 → "50"
+```
+
+---
+
+# 7. Simple Real-Life Analogy
+
+Imagine **water bottles**.
+
+Small bottle → big bottle
+
+Allowed automatically.
+
+But
+
+Big bottle → small bottle
+
+You must **pour carefully**, otherwise water spills.
+
+That is exactly:
+
+```id="mpx49m"
+implicit conversion
+explicit conversion
+```
+
+---
+
+# Final Simple Summary
+
+### String → Number
+
+```id="4tyngj"
+Integer.parseInt()
+Double.parseDouble()
+```
+
+---
+
+### Number → String
+
+```id="qk82o5"
+String.valueOf()
+```
+
+---
+
+### Implicit Conversion
+
+Automatic conversion.
+
+```id="d3iy5g"
+int → double
+```
+
+---
+
+### Explicit Conversion
+
+Manual conversion.
+
+```id="l1zzru"
+(int) doubleValue
+```
+
+---
