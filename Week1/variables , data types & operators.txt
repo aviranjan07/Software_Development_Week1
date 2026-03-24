@@ -1,0 +1,465 @@
+# 1. Variables
+
+## Simple Meaning
+
+A **variable** is a **container that stores data**.
+
+Think of it like a **box with a label**.
+
+Example:
+
+Imagine three boxes:
+
+* Box named **Age**
+* Box named **Name**
+* Box named **Price**
+
+Each box stores some information.
+
+So in programming:
+
+```
+age = 20
+name = "Rahul"
+price = 50
+```
+
+Here:
+
+* `age` is a variable
+* `20` is the value stored inside it
+
+So,
+
+**Variable = Named storage location for data**
+
+---
+
+## Real Life Example
+
+Think of a **school register**.
+
+| Student Name | Marks |
+| ------------ | ----- |
+| Rahul        | 80    |
+| Amit         | 90    |
+
+Here:
+
+* **Student Name** → variable
+* **Marks** → variable
+* **80, 90** → values
+
+---
+
+## Why Variables Are Needed
+
+Programs constantly work with data.
+
+Example:
+
+* Bank balance
+* Temperature
+* Student marks
+* User name
+* Mobile number
+
+Variables allow programs to **store and manipulate data**.
+
+---
+
+## Example in C++
+
+```
+int age = 20;
+```
+
+Meaning:
+
+* `int` → type of data
+* `age` → variable name
+* `20` → value stored
+
+---
+
+## Variable Rules
+
+1️⃣ Variable name cannot start with a number
+
+❌ `1age`
+
+✅ `age1`
+
+2️⃣ No spaces
+
+❌ `my age`
+
+✅ `myAge`
+
+3️⃣ Cannot use reserved keywords
+
+❌ `int int = 5`
+
+---
+
+# 2. Data Types
+
+## Simple Meaning
+
+A **data type tells the computer what type of data is stored** in a variable.
+
+Because computers treat different data differently.
+
+Example:
+
+* Numbers
+* Text
+* True/False values
+
+---
+
+## Why Data Types Are Important
+
+Imagine if the computer mixed up:
+
+```
+Age = 25
+Name = Rahul
+```
+
+If it treated **Rahul as a number**, it would create errors.
+
+So the computer must know **what type of data it is**.
+
+---
+
+# Common Data Types
+
+## 1. Integer (int)
+
+Stores **whole numbers**.
+
+Examples:
+
+```
+5
+10
+-7
+100
+```
+
+Example code:
+
+```
+int age = 25;
+```
+
+---
+
+## 2. Float / Double
+
+Stores **decimal numbers**.
+
+Examples:
+
+```
+3.14
+10.5
+99.99
+```
+
+Example:
+
+```
+float price = 10.5;
+```
+
+---
+
+## 3. Character (char)
+
+Stores **a single character**.
+
+Example:
+
+```
+'A'
+'B'
+'9'
+```
+
+Example:
+
+```
+char grade = 'A';
+```
+
+---
+
+## 4. String
+
+Stores **text or words**.
+
+Example:
+
+```
+"Hello"
+"Rahul"
+"Programming"
+```
+
+Example:
+
+```
+string name = "Rahul";
+```
+
+---
+
+## 5. Boolean (bool)
+
+Stores **True or False**.
+
+Example:
+
+```
+true
+false
+```
+
+Example:
+
+```
+bool isLoggedIn = true;
+```
+
+---
+
+# Summary of Data Types
+
+| Data Type | Stores           |
+| --------- | ---------------- |
+| int       | whole numbers    |
+| float     | decimal numbers  |
+| char      | single character |
+| string    | text             |
+| bool      | true/false       |
+
+---
+
+# 3. Operators
+
+## Simple Meaning
+
+**Operators are symbols that perform operations on data.**
+
+Example:
+
+```
++
+-
+*
+/
+```
+
+Just like mathematics.
+
+---
+
+# Types of Operators
+
+---
+
+# 1. Arithmetic Operators
+
+Used for **mathematical calculations**.
+
+| Operator | Meaning             |
+| -------- | ------------------- |
+| +        | Addition            |
+| -        | Subtraction         |
+| *        | Multiplication      |
+| /        | Division            |
+| %        | Modulus (remainder) |
+
+Example:
+
+```
+a = 10
+b = 5
+
+a + b = 15
+a - b = 5
+a * b = 50
+a / b = 2
+```
+
+---
+
+# 2. Relational Operators
+
+Used to **compare values**.
+
+They return **true or false**.
+
+| Operator | Meaning          |
+| -------- | ---------------- |
+| ==       | equal to         |
+| !=       | not equal        |
+| >        | greater than     |
+| <        | less than        |
+| >=       | greater or equal |
+| <=       | less or equal    |
+
+Example:
+
+```
+10 > 5
+```
+
+Result:
+
+```
+true
+```
+
+---
+
+# 3. Logical Operators
+
+Used to combine conditions.
+
+| Operator | Meaning |   |    |
+| -------- | ------- | - | -- |
+| &&       | AND     |   |    |
+|          |         |   | OR |
+| !        | NOT     |   |    |
+
+Example:
+
+```
+age > 18 && citizen == true
+```
+
+Meaning:
+
+Person must satisfy **both conditions**.
+
+---
+
+# 4. Assignment Operators
+
+Used to **assign values to variables**.
+
+Example:
+
+```
+a = 10
+```
+
+Here:
+
+`=` is the assignment operator.
+
+More examples:
+
+```
++=
+-=
+*=
+/=
+```
+
+Example:
+
+```
+a += 5
+```
+
+Means:
+
+```
+a = a + 5
+```
+
+---
+
+# Example Program (Simple)
+
+Example in C++:
+
+```
+#include <iostream>
+using namespace std;
+
+int main() {
+
+int a = 10;
+int b = 5;
+
+int sum = a + b;
+
+cout << sum;
+
+}
+```
+
+Explanation:
+
+* `a` and `b` are variables
+* `int` is the data type
+* `+` is an operator
+* Result is stored in `sum`
+
+Output:
+
+```
+15
+```
+
+---
+
+# Final Easy Summary
+
+### Variable
+
+A **named container that stores data**.
+
+Example:
+
+```
+age = 20
+```
+
+---
+
+### Data Type
+
+Defines **what type of data a variable stores**.
+
+Example:
+
+```
+int age = 20
+```
+
+---
+
+### Operator
+
+A **symbol used to perform operations on data**.
+
+Example:
+
+```
+a + b
+```
+
+---
+
+✅ In simple words:
+
+**Programming = Data + Variables + Operators + Logic**
+
+---
+
