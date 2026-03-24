@@ -1,0 +1,259 @@
+# 1. What is Pseudo Code?
+
+**Pseudo code is writing the logic of a program in simple human language before writing actual code.**
+
+It looks like code but **does not follow strict programming syntax**.
+
+Example problem:
+Add two numbers.
+
+Pseudo code:
+
+```text
+Start
+Take first number
+Take second number
+Add the numbers
+Print result
+End
+```
+
+This is **not Java**, but it explains the logic clearly.
+
+---
+
+# 2. Why Programmers Use Pseudo Code
+
+Pseudo code helps to:
+
+* Understand the **problem clearly**
+* Plan the **solution step by step**
+* Reduce coding mistakes
+* Make complex problems easier
+
+Professional programmers often **plan logic first**, then write code.
+
+---
+
+# 3. Writing Code Before Coding (Thinking First)
+
+Many beginners try to **write code immediately**.
+
+But experienced programmers first ask:
+
+```text
+What steps will solve the problem?
+```
+
+Example problem:
+Check if a number is even or odd.
+
+Pseudo code:
+
+```text
+Start
+Input number
+Divide number by 2
+If remainder is 0
+    Print "Even"
+Else
+    Print "Odd"
+End
+```
+
+Then convert to Java code:
+
+```java
+int num = 10;
+
+if(num % 2 == 0)
+{
+    System.out.println("Even");
+}
+else
+{
+    System.out.println("Odd");
+}
+```
+
+Pseudo code acts like a **bridge between thinking and coding**.
+
+---
+
+# 4. Breaking Problems into Small Parts
+
+Complex problems become easier when you **break them into smaller steps**.
+
+This is called **problem decomposition**.
+
+Example problem:
+
+Find the average of three numbers.
+
+Instead of thinking about everything at once, break it down.
+
+Pseudo code:
+
+```text
+Start
+Input first number
+Input second number
+Input third number
+Add all numbers
+Divide sum by 3
+Print average
+End
+```
+
+Each step is simple.
+
+---
+
+# 5. Example: Finding Largest Number
+
+Problem:
+Find the largest of two numbers.
+
+Pseudo code:
+
+```text
+Start
+Input number A
+Input number B
+
+If A > B
+    Print A is largest
+Else
+    Print B is largest
+
+End
+```
+
+Then convert to Java:
+
+```java
+int a = 10;
+int b = 20;
+
+if(a > b)
+{
+    System.out.println("A is largest");
+}
+else
+{
+    System.out.println("B is largest");
+}
+```
+
+---
+
+# 6. Example: Simple Calculator Logic
+
+Problem: Create a calculator.
+
+Pseudo code:
+
+```text
+Start
+Input first number
+Input second number
+Input operator
+
+If operator is +
+    Add numbers
+If operator is -
+    Subtract numbers
+If operator is *
+    Multiply numbers
+If operator is /
+    Divide numbers
+
+Print result
+End
+```
+
+This logic helps before writing actual code.
+
+---
+
+# 7. Common Pseudo Code Keywords
+
+Pseudo code often uses simple words.
+
+| Keyword | Meaning              |
+| ------- | -------------------- |
+| Start   | Beginning of program |
+| End     | End of program       |
+| Input   | Take user input      |
+| Output  | Print result         |
+| If      | Check condition      |
+| Else    | Alternative action   |
+| Repeat  | Loop                 |
+
+Example:
+
+```text
+Start
+Input number
+If number > 0
+    Output "Positive"
+Else
+    Output "Negative"
+End
+```
+
+---
+
+# 8. Why This Skill is Powerful
+
+Pseudo code helps programmers:
+
+* Think logically
+* Avoid confusion
+* Solve problems faster
+* Write cleaner programs
+
+Good programmers spend **more time thinking than typing code**.
+
+---
+
+# Final Simple Summary
+
+Pseudo code is **planning the solution before coding**.
+
+Two main ideas:
+
+### 1. Writing Code Before Coding
+
+Think and write **logical steps first**.
+
+Example:
+
+```text
+Input numbers
+Add numbers
+Print result
+```
+
+---
+
+### 2. Breaking Problems into Small Parts
+
+Large problems become easy when divided into **small steps**.
+
+Example:
+
+```text
+Take numbers
+Add them
+Divide result
+Print answer
+```
+
+---
+
+✅ Simple rule used by programmers:
+
+> **First think → then write pseudo code → then write actual code.**
+
+---
