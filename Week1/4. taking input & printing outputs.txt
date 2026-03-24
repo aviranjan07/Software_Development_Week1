@@ -1,0 +1,459 @@
+# 1. What is Input and Output in Programming?
+
+## Input
+
+**Input means giving data to the program.**
+
+Example:
+
+* User enters name
+* User enters age
+* User enters marks
+
+The program **receives information from the user**.
+
+Example:
+
+```
+Enter your age: 20
+```
+
+Here **20 is input**.
+
+---
+
+## Output
+
+**Output means the result shown by the program.**
+
+Example:
+
+```
+Your age is 20
+```
+
+So:
+
+| Term   | Meaning               |
+| ------ | --------------------- |
+| Input  | Data given to program |
+| Output | Data shown by program |
+
+---
+
+# 2. Printing Output in Java
+
+In Java, we use:
+
+```
+System.out.println()
+```
+
+to print output.
+
+### Example
+
+```java
+public class Main {
+    public static void main(String[] args) {
+
+        System.out.println("Hello World");
+
+    }
+}
+```
+
+Output:
+
+```
+Hello World
+```
+
+---
+
+## Understanding the Statement
+
+```
+System.out.println("Hello World");
+```
+
+Breakdown:
+
+| Part          | Meaning           |
+| ------------- | ----------------- |
+| System        | Java system class |
+| out           | Output stream     |
+| println       | Print line        |
+| "Hello World" | Text to print     |
+
+`println` means **print and move to next line**.
+
+---
+
+## Difference Between print and println
+
+### print
+
+```java
+System.out.print("Hello ");
+System.out.print("World");
+```
+
+Output:
+
+```
+Hello World
+```
+
+---
+
+### println
+
+```java
+System.out.println("Hello");
+System.out.println("World");
+```
+
+Output:
+
+```
+Hello
+World
+```
+
+Because `println` moves to **next line**.
+
+---
+
+# 3. Taking Input in Java
+
+Java uses a class called:
+
+```
+Scanner
+```
+
+The **Scanner class reads user input from keyboard**.
+
+---
+
+# Step 1: Import Scanner
+
+At the top of the program:
+
+```java
+import java.util.Scanner;
+```
+
+This tells Java:
+
+> I want to use the Scanner tool.
+
+---
+
+# Step 2: Create Scanner Object
+
+```java
+Scanner sc = new Scanner(System.in);
+```
+
+Meaning:
+
+* `Scanner` → class
+* `sc` → object name
+* `System.in` → keyboard input
+
+---
+
+# Step 3: Read Input
+
+Example:
+
+```java
+int age = sc.nextInt();
+```
+
+This reads an **integer value** from the user.
+
+---
+
+# Full Example Program
+
+```java
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+
+        Scanner sc = new Scanner(System.in);
+
+        System.out.println("Enter your age:");
+
+        int age = sc.nextInt();
+
+        System.out.println("Your age is " + age);
+
+    }
+}
+```
+
+---
+
+# How the Program Works
+
+Step 1
+
+Program asks:
+
+```
+Enter your age:
+```
+
+Step 2
+
+User types:
+
+```
+20
+```
+
+Step 3
+
+Program prints:
+
+```
+Your age is 20
+```
+
+---
+
+# Different Types of Input in Java
+
+Scanner can read different **data types**.
+
+---
+
+## Integer Input
+
+```java
+int number = sc.nextInt();
+```
+
+Example input:
+
+```
+25
+```
+
+---
+
+## Float Input
+
+```java
+float price = sc.nextFloat();
+```
+
+Example:
+
+```
+12.5
+```
+
+---
+
+## Double Input
+
+```java
+double value = sc.nextDouble();
+```
+
+---
+
+## String Input (Single Word)
+
+```java
+String name = sc.next();
+```
+
+Example:
+
+```
+Rahul
+```
+
+---
+
+## String Input (Full Sentence)
+
+```java
+String name = sc.nextLine();
+```
+
+Example:
+
+```
+Rahul Kumar Das
+```
+
+---
+
+# Example Program with Multiple Inputs
+
+```java
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+
+        Scanner sc = new Scanner(System.in);
+
+        System.out.println("Enter your name:");
+        String name = sc.nextLine();
+
+        System.out.println("Enter your age:");
+        int age = sc.nextInt();
+
+        System.out.println("Hello " + name);
+        System.out.println("You are " + age + " years old");
+
+    }
+}
+```
+
+Output example:
+
+```
+Enter your name:
+Rahul
+
+Enter your age:
+20
+
+Hello Rahul
+You are 20 years old
+```
+
+---
+
+# String Concatenation
+
+Joining text and variables together.
+
+Example:
+
+```java
+System.out.println("Age is " + age);
+```
+
+If age = 20
+
+Output:
+
+```
+Age is 20
+```
+
+`+` joins text and variables.
+
+---
+
+# Input and Output Flow
+
+```
+User → Input → Program Processing → Output
+```
+
+Example:
+
+```
+User enters numbers
+Program adds them
+Program prints result
+```
+
+---
+
+# Example: Addition Program
+
+```java
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+
+        Scanner sc = new Scanner(System.in);
+
+        System.out.println("Enter first number:");
+        int a = sc.nextInt();
+
+        System.out.println("Enter second number:");
+        int b = sc.nextInt();
+
+        int sum = a + b;
+
+        System.out.println("Sum = " + sum);
+
+    }
+}
+```
+
+Example Output:
+
+```
+Enter first number:
+5
+
+Enter second number:
+3
+
+Sum = 8
+```
+
+---
+
+# Common Beginner Mistakes
+
+### 1 Forgetting import
+
+Wrong:
+
+```
+Scanner sc = new Scanner(System.in);
+```
+
+Correct:
+
+```
+import java.util.Scanner;
+```
+
+---
+
+### 2 Missing Semicolon
+
+Wrong:
+
+```
+System.out.println("Hello")
+```
+
+Correct:
+
+```
+System.out.println("Hello");
+```
+
+---
+
+# Final Simple Summary
+
+| Concept            | Meaning                 |
+| ------------------ | ----------------------- |
+| Input              | Data given by user      |
+| Output             | Result shown by program |
+| Scanner            | Tool to read input      |
+| System.out.println | Print output            |
+| nextInt()          | Read integer            |
+| nextLine()         | Read sentence           |
+
+---
