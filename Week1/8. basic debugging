@@ -1,0 +1,345 @@
+# 1. What is Debugging?
+
+**Debugging means finding and fixing errors (bugs) in a program.**
+
+In programming, mistakes are called **bugs**.
+
+Example:
+
+You wrote a program to add numbers, but it gives the wrong result.
+
+Then you must **check the code, find the mistake, and fix it**.
+
+That process is called **debugging**.
+
+So:
+
+**Debugging = Finding + Fixing errors in code.**
+
+---
+
+# 2. Why It Is Called “Bug”
+
+The word **bug** became famous in **1947** when engineers found a real **moth stuck inside a computer** causing errors.
+
+Since then:
+
+* **Bug → error**
+* **Debugging → fixing errors**
+
+---
+
+# 3. Types of Errors in Java
+
+There are **3 main types of errors** beginners face.
+
+| Error Type    | Meaning                             |
+| ------------- | ----------------------------------- |
+| Syntax Error  | Wrong grammar of code               |
+| Runtime Error | Error while program runs            |
+| Logical Error | Program runs but gives wrong result |
+
+---
+
+# 4. Syntax Errors
+
+These are **grammar mistakes in code**.
+
+The compiler detects them.
+
+Example:
+
+Wrong:
+
+```java
+System.out.println("Hello")
+```
+
+Problem:
+
+Missing **semicolon**.
+
+Correct:
+
+```java
+System.out.println("Hello");
+```
+
+---
+
+Another example:
+
+Wrong:
+
+```java
+int age = "20";
+```
+
+Problem:
+
+String used instead of integer.
+
+Correct:
+
+```java
+int age = 20;
+```
+
+---
+
+# 5. Runtime Errors
+
+These errors occur **while the program is running**.
+
+Example:
+
+```java
+int a = 10;
+int b = 0;
+
+int c = a / b;
+```
+
+Problem:
+
+Division by zero.
+
+This causes a **runtime error**.
+
+---
+
+Another example:
+
+Taking wrong input type.
+
+If program expects:
+
+```id="yr85a0"
+nextInt()
+```
+
+But user enters:
+
+```id="wh1k1q"
+Hello
+```
+
+Java throws an error.
+
+---
+
+# 6. Logical Errors
+
+These are **the most difficult errors**.
+
+Program runs but gives **wrong result**.
+
+Example:
+
+Wrong code:
+
+```java
+int a = 10;
+int b = 5;
+
+int sum = a - b;
+System.out.println(sum);
+```
+
+Output:
+
+```id="ofpfbo"
+5
+```
+
+But we wanted **addition**.
+
+Correct code:
+
+```java
+int sum = a + b;
+```
+
+This is a **logic error**.
+
+---
+
+# 7. Example of Debugging Step by Step
+
+Program:
+
+```java
+public class Main {
+    public static void main(String[] args) {
+
+        int a = 5
+        int b = 3;
+
+        int sum = a + b;
+
+        System.out.println(sum);
+
+    }
+}
+```
+
+Error:
+
+```id="xqhuej"
+int a = 5
+```
+
+Missing semicolon.
+
+Correct code:
+
+```java
+int a = 5;
+```
+
+---
+
+# 8. Basic Debugging Techniques
+
+Good programmers follow these simple techniques.
+
+---
+
+## 1. Read Error Messages
+
+Java tells you **where the error is**.
+
+Example:
+
+```id="9ukb7s"
+error: ';' expected
+```
+
+This means you forgot a **semicolon**.
+
+---
+
+## 2. Check Line by Line
+
+Look at the code **step by step**.
+
+Example:
+
+```java
+int a = 10;
+int b = 5;
+int sum = a + b;
+```
+
+Check each line carefully.
+
+---
+
+## 3. Print Values
+
+Use **print statements** to check variables.
+
+Example:
+
+```java
+System.out.println(a);
+System.out.println(b);
+```
+
+This helps find where the problem occurs.
+
+---
+
+## 4. Test with Simple Inputs
+
+Example:
+
+Test your program with small numbers.
+
+Instead of complex values.
+
+---
+
+## 5. Check Logic Carefully
+
+Ask yourself:
+
+* Are the formulas correct?
+* Are conditions correct?
+
+Example:
+
+```java
+if(age > 18)
+```
+
+Should it be:
+
+```java
+if(age >= 18)
+```
+
+Small logic mistakes create bugs.
+
+---
+
+# 9. Example Debugging Practice
+
+Buggy program:
+
+```java
+int a = 5;
+int b = 10;
+
+if(a > b)
+{
+    System.out.println("B is greater");
+}
+else
+{
+    System.out.println("A is greater");
+}
+```
+
+Problem:
+
+The **messages are reversed**.
+
+Correct version:
+
+```java
+if(a > b)
+{
+    System.out.println("A is greater");
+}
+else
+{
+    System.out.println("B is greater");
+}
+```
+
+---
+
+# 10. Debugging Mindset
+
+Good programmers follow this mindset:
+
+```id="mrrwkk"
+Do not panic
+Read error
+Check code
+Fix problem
+Test again
+```
+
+Debugging is **normal**.
+
+Even professional programmers debug **every day**.
+
+---
+
+# Final Simple Definition
+
+**Debugging is the process of identifying, analyzing, and fixing errors in a program to make it work correctly.**
+
+---
