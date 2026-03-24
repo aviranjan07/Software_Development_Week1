@@ -1,0 +1,282 @@
+# Level 1 — Very Basic Logic (1–10)
+
+These teach **input, output, and simple calculations**.
+
+1. Print **"Hello World"**.
+2. Take a number from user and **print it**.
+3. Take two numbers and **add them**.
+4. Take two numbers and **find subtraction**.
+5. Take two numbers and **find multiplication**.
+6. Take two numbers and **find division**.
+7. Find **square of a number**.
+8. Find **cube of a number**.
+9. Convert **Celsius to Fahrenheit**.
+10. Calculate **area of a circle**.
+
+Example formula:
+
+```
+Area = π × r × r
+```
+
+---
+
+# Level 2 — Conditions (if / else) (11–20)
+
+These problems build **decision making logic**.
+
+11. Check if a number is **even or odd**.
+12. Check if a number is **positive, negative, or zero**.
+13. Find **largest of two numbers**.
+14. Find **largest of three numbers**.
+15. Check if a person is **eligible to vote (age ≥ 18)**.
+16. Check if a year is a **leap year**.
+17. Check if a number is **divisible by 5 and 11**.
+18. Find **grade from marks**.
+
+Example:
+
+```
+Marks ≥ 90 → A
+Marks ≥ 70 → B
+Marks ≥ 50 → C
+Else → Fail
+```
+
+19. Check if a number is **multiple of 3 or 7**.
+20. Find **absolute value of a number**.
+
+---
+
+# Level 3 — Loops Practice (21–30)
+
+These help understand **repetition**.
+
+21. Print numbers **1 to 10**.
+22. Print numbers **10 to 1**.
+23. Print **even numbers from 1 to 50**.
+24. Print **odd numbers from 1 to 50**.
+25. Print **multiplication table of a number**.
+
+Example:
+
+```
+5 × 1 = 5
+5 × 2 = 10
+```
+
+26. Find **sum of numbers from 1 to N**.
+27. Find **factorial of a number**.
+
+Example:
+
+```
+5! = 5 × 4 × 3 × 2 × 1
+```
+
+28. Count **digits in a number**.
+29. Reverse a number.
+
+Example:
+
+```
+1234 → 4321
+```
+
+30. Find **sum of digits**.
+
+Example:
+
+```
+123 → 1 + 2 + 3 = 6
+```
+
+---
+
+# Level 4 — Number Logic (31–40)
+
+These improve **mathematical programming logic**.
+
+31. Check if a number is **prime**.
+32. Print **all prime numbers from 1 to 100**.
+33. Check if a number is **palindrome**.
+
+Example:
+
+```
+121 → palindrome
+123 → not palindrome
+```
+
+34. Check if a number is **Armstrong number**.
+
+Example:
+
+```
+153 = 1³ + 5³ + 3³
+```
+
+35. Print **Fibonacci series**.
+
+Example:
+
+```
+0 1 1 2 3 5 8 13
+```
+
+36. Find **GCD (Greatest Common Divisor)**.
+37. Find **LCM (Least Common Multiple)**.
+38. Find **power of a number**.
+
+Example:
+
+```
+2^5 = 32
+```
+
+39. Check if a number is **perfect number**.
+
+Example:
+
+```
+6 = 1 + 2 + 3
+```
+
+40. Swap two numbers **without using third variable**.
+
+---
+
+# Level 5 — Pattern Logic (41–50)
+
+These build **strong programming thinking**.
+
+---
+
+### 41. Print star pattern
+
+```
+*
+**
+***
+****
+*****
+```
+
+---
+
+### 42. Reverse star pattern
+
+```
+*****
+****
+***
+**
+*
+```
+
+---
+
+### 43. Number pattern
+
+```
+1
+12
+123
+1234
+12345
+```
+
+---
+
+### 44. Reverse number pattern
+
+```
+12345
+1234
+123
+12
+1
+```
+
+---
+
+### 45. Pyramid pattern
+
+```
+    *
+   ***
+  *****
+ *******
+```
+
+---
+
+### 46. Floyd's triangle
+
+```
+1
+2 3
+4 5 6
+7 8 9 10
+```
+
+---
+
+### 47. Print multiplication table **1 to 10**.
+
+---
+
+### 48. Find **largest digit in a number**.
+
+Example:
+
+```
+Input: 5934
+Output: 9
+```
+
+---
+
+### 49. Find **second largest number** among three numbers.
+
+---
+
+### 50. Create a **simple calculator program**
+
+Menu example:
+
+```
+1 Add
+2 Subtract
+3 Multiply
+4 Divide
+```
+
+---
+
+# Why These 50 Problems Are Important
+
+They teach **all beginner programming concepts**:
+
+| Skill        | Learned From          |
+| ------------ | --------------------- |
+| Variables    | basic problems        |
+| Conditions   | decision problems     |
+| Loops        | repetition problems   |
+| Number logic | mathematical thinking |
+| Patterns     | nested loops          |
+
+---
+
+# Golden Rule for Solving Programming Problems
+
+Always follow this order:
+
+```
+1 Understand problem
+2 Write logic (steps)
+3 Convert steps into code
+4 Test with examples
+```
+
+---
