@@ -1,0 +1,329 @@
+I will explain **Basic Error Understanding in Programming (Java)** in a **very simple way**, because understanding errors is one of the **most important skills for beginners**.
+
+When writing programs, mistakes happen.
+These mistakes are called **errors**.
+
+There are **three main types of errors**:
+
+1️⃣ **Syntax Error**
+2️⃣ **Logical Error**
+3️⃣ **Runtime Error**
+
+---
+
+# 1. Syntax Error
+
+## Simple Meaning
+
+A **syntax error** happens when the **grammar of the programming language is wrong**.
+
+Just like grammar mistakes in English.
+
+Example sentence:
+
+```text
+I am go school
+```
+
+Correct sentence:
+
+```text
+I am going to school
+```
+
+Programming languages also have **rules (syntax)**.
+
+If you break those rules, the program **cannot run**.
+
+---
+
+## Example in Java
+
+Wrong code:
+
+```java
+System.out.println("Hello")
+```
+
+Problem:
+
+Missing **semicolon ( ; )**
+
+Correct code:
+
+```java
+System.out.println("Hello");
+```
+
+---
+
+### Another Example
+
+Wrong:
+
+```java
+int number = "10";
+```
+
+Problem:
+
+Trying to store **text inside an integer variable**.
+
+Correct:
+
+```java
+int number = 10;
+```
+
+---
+
+## What Happens?
+
+The **compiler detects syntax errors** before the program runs.
+
+Example message:
+
+```text
+';' expected
+```
+
+So syntax errors are **the easiest errors to fix**.
+
+---
+
+# 2. Logical Error
+
+## Simple Meaning
+
+A **logical error happens when the program runs but produces the wrong result**.
+
+This means:
+
+* Program runs successfully
+* But the **logic is wrong**
+
+---
+
+## Example
+
+We want to **add two numbers**.
+
+Wrong code:
+
+```java
+int a = 10;
+int b = 5;
+
+int sum = a - b;
+
+System.out.println(sum);
+```
+
+Output:
+
+```text
+5
+```
+
+But we wanted:
+
+```text
+15
+```
+
+Problem:
+
+Used **- instead of +**
+
+Correct code:
+
+```java
+int sum = a + b;
+```
+
+---
+
+## Another Example
+
+Wrong grading logic:
+
+```java
+if(marks > 50)
+{
+   System.out.println("Pass");
+}
+```
+
+But if marks = **50**, it should also pass.
+
+Correct logic:
+
+```java
+if(marks >= 50)
+```
+
+Logical errors are **harder to find**, because the program still runs.
+
+---
+
+# 3. Runtime Error
+
+## Simple Meaning
+
+A **runtime error happens while the program is running**.
+
+The program starts normally, but crashes during execution.
+
+---
+
+## Example 1: Division by Zero
+
+```java
+int a = 10;
+int b = 0;
+
+int result = a / b;
+```
+
+Problem:
+
+```text
+Division by zero
+```
+
+The program crashes while running.
+
+---
+
+## Example 2: Wrong Input
+
+If program expects:
+
+```java
+int number = sc.nextInt();
+```
+
+But user enters:
+
+```text
+hello
+```
+
+Java throws an error.
+
+---
+
+## Example Error Message
+
+```text
+Exception in thread "main"
+java.lang.ArithmeticException: / by zero
+```
+
+This tells us the program failed during execution.
+
+---
+
+# 4. Quick Comparison
+
+| Error Type    | When It Happens               | Example                  |
+| ------------- | ----------------------------- | ------------------------ |
+| Syntax Error  | Before running program        | Missing semicolon        |
+| Logical Error | Program runs but wrong result | Using `-` instead of `+` |
+| Runtime Error | While program runs            | Division by zero         |
+
+---
+
+# 5. Simple Real-Life Example
+
+Imagine cooking.
+
+### Syntax Error
+
+Recipe written incorrectly.
+
+Example:
+
+```text
+Add salt salt water boil
+```
+
+Confusing instructions.
+
+---
+
+### Logical Error
+
+Recipe works but food tastes bad.
+
+Example:
+
+```text
+Add 5 spoons of salt
+```
+
+Too much salt.
+
+---
+
+### Runtime Error
+
+Something breaks while cooking.
+
+Example:
+
+```text
+Gas cylinder empty
+```
+
+Cooking stops suddenly.
+
+---
+
+# Final Simple Summary
+
+Programming errors are mainly:
+
+### 1️⃣ Syntax Error
+
+Wrong code grammar.
+
+Example:
+
+```java
+System.out.println("Hello")
+```
+
+---
+
+### 2️⃣ Logical Error
+
+Wrong program logic.
+
+Example:
+
+```java
+a - b instead of a + b
+```
+
+---
+
+### 3️⃣ Runtime Error
+
+Program crashes during execution.
+
+Example:
+
+```java
+10 / 0
+```
+
+---
+
+✅ Important truth:
+
+**Even professional programmers spend a lot of time fixing errors.**
+
+Debugging errors is **a normal part of programming**.
+
+---
