@@ -1,0 +1,418 @@
+# 1. What is Flow of Execution?
+
+**Flow of execution means the order in which the computer runs the instructions in a program.**
+
+A computer does not understand the whole program at once.
+
+Instead it **reads and executes instructions step by step**.
+
+Think of it like **following a recipe**.
+
+Example recipe:
+
+```
+1 Boil water
+2 Add tea leaves
+3 Add milk
+4 Pour into cup
+```
+
+You must follow the **steps in order**.
+
+Programming works the same way.
+
+So:
+
+**Flow of Execution = The order in which program instructions run.**
+
+---
+
+# 2. How Code Runs Line by Line
+
+By default, programs run **one line at a time**.
+
+Example:
+
+```java
+public class Main {
+    public static void main(String[] args) {
+
+        System.out.println("Start");
+        System.out.println("Learning Java");
+        System.out.println("End");
+
+    }
+}
+```
+
+Execution happens like this:
+
+Step 1
+
+```
+System.out.println("Start");
+```
+
+Output
+
+```
+Start
+```
+
+Step 2
+
+```
+System.out.println("Learning Java");
+```
+
+Output
+
+```
+Learning Java
+```
+
+Step 3
+
+```
+System.out.println("End");
+```
+
+Output
+
+```
+End
+```
+
+So the computer reads:
+
+```
+Line 1 → Execute
+Line 2 → Execute
+Line 3 → Execute
+```
+
+This is called **sequential execution**.
+
+---
+
+# 3. Top-to-Bottom Execution
+
+Programs normally run **from top to bottom**.
+
+Example:
+
+```java
+int a = 5;
+int b = 10;
+int sum = a + b;
+
+System.out.println(sum);
+```
+
+Execution order:
+
+```
+1 int a = 5;
+2 int b = 10;
+3 int sum = a + b;
+4 print result
+```
+
+Output
+
+```
+15
+```
+
+The computer **never jumps randomly** unless there is a control statement.
+
+---
+
+# 4. Start Point of Java Program
+
+Every Java program starts from:
+
+```java
+public static void main(String[] args)
+```
+
+This is called the **main method**.
+
+The JVM (Java Virtual Machine) always begins execution here.
+
+Example structure:
+
+```java
+public class Main {
+
+    public static void main(String[] args) {
+
+        // execution starts here
+
+    }
+
+}
+```
+
+---
+
+# 5. Program Control (Changing the Flow)
+
+Sometimes programs should **not run strictly top to bottom**.
+
+We may want to:
+
+• skip some code
+• repeat some code
+• choose different paths
+
+This is called **program control**.
+
+It is done using **control statements**.
+
+Main types:
+
+1. Decision control
+2. Loop control
+
+---
+
+# 6. Decision Control (if / else)
+
+The program chooses **one path based on a condition**.
+
+Example:
+
+```java
+int age = 20;
+
+if(age >= 18)
+{
+    System.out.println("Adult");
+}
+else
+{
+    System.out.println("Minor");
+}
+```
+
+Execution:
+
+Step 1
+
+```
+Check condition age ≥ 18
+```
+
+Step 2
+
+Condition is **true**
+
+Step 3
+
+Execute this block
+
+```
+Adult
+```
+
+The **else part is skipped**.
+
+So the flow becomes:
+
+```
+Check condition
+True → run if block
+False → run else block
+```
+
+---
+
+# 7. Loop Control (Repeating Code)
+
+Loops repeat instructions.
+
+Example:
+
+```java
+for(int i = 1; i <= 3; i++)
+{
+    System.out.println(i);
+}
+```
+
+Execution flow:
+
+Step 1
+
+```
+i = 1
+```
+
+Step 2
+
+Check condition
+
+```
+1 ≤ 3 → true
+```
+
+Step 3
+
+Print
+
+```
+1
+```
+
+Step 4
+
+Increase i
+
+```
+i = 2
+```
+
+Repeat until condition becomes false.
+
+Output
+
+```
+1
+2
+3
+```
+
+---
+
+# 8. Visual Flow of a Program
+
+Simple flow of execution:
+
+```
+Start
+   ↓
+Input data
+   ↓
+Process data
+   ↓
+Check conditions
+   ↓
+Repeat if needed
+   ↓
+Display output
+   ↓
+End
+```
+
+This is how almost **every program works**.
+
+---
+
+# 9. Example Program with Full Flow
+
+Program:
+
+```java
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+
+        Scanner sc = new Scanner(System.in);
+
+        int num = sc.nextInt();
+
+        if(num % 2 == 0)
+        {
+            System.out.println("Even");
+        }
+        else
+        {
+            System.out.println("Odd");
+        }
+
+    }
+}
+```
+
+Flow of execution:
+
+```
+Start program
+↓
+Create scanner
+↓
+Take input
+↓
+Check condition
+↓
+If remainder = 0
+↓
+Print Even
+Else
+↓
+Print Odd
+↓
+End
+```
+
+---
+
+# 10. Important Concept Beginners Miss
+
+A computer **does not think**.
+
+It only follows instructions **exactly in order**.
+
+Example mistake:
+
+```java
+int sum = a + b;
+
+int a = 5;
+int b = 10;
+```
+
+This causes an error because the computer reads **top to bottom**.
+
+Correct order:
+
+```java
+int a = 5;
+int b = 10;
+
+int sum = a + b;
+```
+
+---
+
+# Final Simple Summary
+
+Flow of execution follows three main rules:
+
+### 1 Sequential Flow
+
+```
+Line by line execution
+```
+
+### 2 Decision Flow
+
+```
+if / else control
+```
+
+### 3 Loop Flow
+
+```
+repeat instructions
+```
+
+---
+
+✅ In simple words:
+
+**Programs normally run from top → bottom, line by line, unless control statements change the flow.**
+
+---
