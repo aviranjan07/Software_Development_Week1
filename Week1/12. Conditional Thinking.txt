@@ -1,0 +1,356 @@
+# 1. What is Conditional Thinking?
+
+**Conditional thinking means making decisions based on a condition.**
+
+In programming, the computer checks something and then **decides what to do**.
+
+Think of it like real life rules.
+
+Example:
+
+```text
+If it rains → take umbrella
+If you are hungry → eat food
+If traffic light is red → stop
+```
+
+The word **“if”** means **a condition must be checked**.
+
+Programming works the same way.
+
+---
+
+# 2. if Concept (Decision-Making Idea)
+
+The **if statement** allows the program to **make decisions**.
+
+Basic idea:
+
+```text
+If condition is true → run code
+If condition is false → skip code
+```
+
+### Basic Java Structure
+
+```java
+if(condition)
+{
+   code to execute
+}
+```
+
+---
+
+### Example
+
+```java
+int age = 20;
+
+if(age >= 18)
+{
+    System.out.println("You can vote");
+}
+```
+
+Program thinking:
+
+1. Check condition → `age >= 18`
+2. If **true**, print message.
+
+Output
+
+```
+You can vote
+```
+
+---
+
+### Real-Life Analogy
+
+Teacher rule:
+
+```text
+If marks ≥ 40 → Pass
+Else → Fail
+```
+
+The program is simply **following rules**.
+
+---
+
+# 3. True vs False Logic
+
+Computers think only in **two possibilities**.
+
+| Value | Meaning                 |
+| ----- | ----------------------- |
+| true  | condition satisfied     |
+| false | condition not satisfied |
+
+This is called **Boolean logic**.
+
+Example:
+
+```java
+5 > 3
+```
+
+Result:
+
+```
+true
+```
+
+Another example:
+
+```java
+5 < 3
+```
+
+Result:
+
+```
+false
+```
+
+So every condition always produces **true or false**.
+
+---
+
+### Example Program
+
+```java
+int number = 10;
+
+if(number > 5)
+{
+    System.out.println("Number is greater than 5");
+}
+```
+
+Check:
+
+```
+10 > 5
+```
+
+Result:
+
+```
+true
+```
+
+So the code runs.
+
+---
+
+### Example Where Condition is False
+
+```java
+int number = 2;
+
+if(number > 5)
+{
+    System.out.println("Number is greater than 5");
+}
+```
+
+Check:
+
+```
+2 > 5
+```
+
+Result:
+
+```
+false
+```
+
+So **nothing happens**.
+
+---
+
+# 4. Comparison Operators
+
+To check conditions, programming uses **comparison operators**.
+
+They compare values and return **true or false**.
+
+---
+
+### Main Comparison Operators
+
+| Operator | Meaning          | Example  |
+| -------- | ---------------- | -------- |
+| `==`     | equal to         | `a == b` |
+| `!=`     | not equal        | `a != b` |
+| `>`      | greater than     | `a > b`  |
+| `<`      | less than        | `a < b`  |
+| `>=`     | greater or equal | `a >= b` |
+| `<=`     | less or equal    | `a <= b` |
+
+---
+
+### Example
+
+```java
+int a = 10;
+int b = 5;
+
+if(a > b)
+{
+    System.out.println("A is greater");
+}
+```
+
+Check:
+
+```
+10 > 5
+```
+
+Result:
+
+```
+true
+```
+
+---
+
+### Example With Equal Operator
+
+```java
+int a = 10;
+int b = 10;
+
+if(a == b)
+{
+    System.out.println("Both numbers are equal");
+}
+```
+
+---
+
+### Important Beginner Mistake
+
+Many beginners confuse:
+
+```
+=   assignment
+==  comparison
+```
+
+Example:
+
+Wrong:
+
+```java
+if(a = 5)
+```
+
+Correct:
+
+```java
+if(a == 5)
+```
+
+---
+
+# 5. How a Program Thinks (Simple Flow)
+
+Conditional thinking follows this logic:
+
+```
+Check condition
+      ↓
+   True ? 
+   /   \
+Yes    No
+ ↓      ↓
+Run    Skip
+Code   Code
+```
+
+---
+
+# 6. Example With Full Logic
+
+```java
+int marks = 60;
+
+if(marks >= 50)
+{
+    System.out.println("Pass");
+}
+```
+
+Program thinking:
+
+```
+Step 1: Check condition
+60 ≥ 50
+
+Step 2: Result = true
+
+Step 3: Execute code
+```
+
+Output:
+
+```
+Pass
+```
+
+---
+
+# Final Simple Summary
+
+**Conditional thinking allows programs to make decisions.**
+
+Main ideas:
+
+### 1. if statement
+
+Used to **make decisions**.
+
+```
+if(condition)
+```
+
+---
+
+### 2. True vs False logic
+
+Every condition becomes either:
+
+```
+true
+false
+```
+
+---
+
+### 3. Comparison operators
+
+Used to compare values.
+
+Examples:
+
+```
+==
+!=
+>
+<
+>=
+<=
+```
+
+---
+
+✅ In simple words:
+
+**Conditional thinking = Checking a condition and deciding what the program should do.**
+
+---
