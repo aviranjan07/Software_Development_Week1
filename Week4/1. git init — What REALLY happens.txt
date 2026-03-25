@@ -1,0 +1,18 @@
+🧠 1. git init — What REALLY happens
+git init
+💡 Deep Understanding:
+Creates a hidden folder: .git
+This folder stores:
+commits history
+branches
+config
+HEAD pointer
+
+👉 Think:
+
+“Git just created a database inside my project”
+
+📂 Inside .git:
+objects/ → all commits & files
+refs/ → branch pointers
+HEAD → current branch
