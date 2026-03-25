@@ -1,0 +1,18 @@
+🧠 2. git status — Your Best Friend
+git status
+💡 Deep Understanding:
+
+Git divides files into 3 states:
+
+Untracked
+Modified
+Staged
+
+👉 This command tells:
+
+What changed
+What will be committed
+What is ignored
+🔥 Pro Tip:
+
+Run this before every commit
