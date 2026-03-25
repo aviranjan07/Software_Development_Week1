@@ -1,0 +1,10 @@
+🧠 6.git remote add origin
+git remote add origin <url>
+
+💡 Deep Understanding:
+Connects your local repo to GitHub
+origin = nickname of remote repo
+
+👉 You can have multiple remotes:
+
+git remote -v
