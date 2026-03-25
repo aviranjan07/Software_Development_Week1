@@ -1,0 +1,18 @@
+🧠 7.git push — Sending data
+
+git push -u origin main
+
+💡 Deep Understanding:
+Uploads commits to GitHub
+-u sets upstream (link local ↔ remote)
+
+👉 After this:
+
+git push
+
+will work directly
+
+⚠️ Advanced:
+git push --force
+
+👉 Dangerous — rewrites history 🚨
