@@ -1,0 +1,17 @@
+🧠 3. git add — Not just “add”
+git add .
+💡 Deep Understanding:
+
+👉 Moves files to Staging Area
+
+Think:
+
+“I am selecting exactly what goes into next snapshot”
+
+⚠️ Advanced Usage:
+Add specific file:
+git add index.js
+Add interactively:
+git add -p
+
+👉 Lets you stage part of code (very powerful)
