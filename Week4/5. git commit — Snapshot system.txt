@@ -1,0 +1,21 @@
+🧠 4. git commit — Snapshot system
+git commit -m "Added login system"
+
+💡 Deep Understanding:
+Creates a snapshot
+Stores:
+file changes
+author
+timestamp
+message
+
+👉 Each commit has a unique ID (SHA hash)
+
+🔥 Advanced:
+git commit -am "quick commit"
+
+👉 Adds + commits tracked files (not new files)
+
+🧠 Think:
+
+“Commit = checkpoint in game”
