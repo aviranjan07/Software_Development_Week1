@@ -1,0 +1,296 @@
+🧠 16.git stash — Temporary save
+
+git stash
+
+💡 Deep Understanding:
+
+👉 Saves work without committing
+
+Bring back:
+git stash pop
+
+
+## 📦 `git stash` — Temporary Save (Work in Progress)
+
+---
+
+# 🧠 Core Idea
+
+> **`git stash` = temporarily save your unfinished changes and clean your workspace**
+
+👉 It lets you:
+
+* Pause current work ⏸️
+* Switch branches safely 🔄
+* Come back later and continue ▶️
+
+---
+
+# 🤔 WHY we use `git stash`
+
+### 🧩 Real-life scenario
+
+You’re working on a feature:
+
+```text
+Feature incomplete ❌
+```
+
+Suddenly:
+👉 You need to fix a bug on another branch 🚨
+
+👉 But you can’t switch branches because:
+
+* You have uncommitted changes
+
+---
+
+### ✅ Solution:
+
+```bash
+git stash
+```
+
+✔ Saves your work
+✔ Cleans your working directory
+✔ Allows branch switching
+
+---
+
+# ⚙️ HOW it works
+
+---
+
+## 📌 Step 1: Save changes
+
+```bash
+git stash
+```
+
+👉 Output:
+
+```text
+Saved working directory and index state
+```
+
+---
+
+## 📊 Visual
+
+```text
+Before stash:
+
+Working Directory: modified files ❗
+
+After stash:
+
+Working Directory: clean ✅
+Stash: saved changes 📦
+```
+
+---
+
+# 🔄 Step 2: Switch branch
+
+```bash
+git switch main
+```
+
+👉 Now you can work safely
+
+---
+
+# 🔁 Step 3: Restore your work
+
+```bash
+git stash pop
+```
+
+👉 Brings back your changes
+
+---
+
+# 🧩 Important Commands
+
+---
+
+## 🔹 Save with message
+
+```bash
+git stash push -m "login work"
+```
+
+---
+
+## 🔹 View stashes
+
+```bash
+git stash list
+```
+
+👉 Output:
+
+```text
+stash@{0}: On feature/login: login work
+```
+
+---
+
+## 🔹 Apply stash (keep it)
+
+```bash
+git stash apply
+```
+
+👉 Restores but keeps stash
+
+---
+
+## 🔹 Apply specific stash
+
+```bash
+git stash apply stash@{0}
+```
+
+---
+
+## 🔹 Delete stash
+
+```bash
+git stash drop stash@{0}
+```
+
+---
+
+## 🔹 Clear all stashes
+
+```bash
+git stash clear
+```
+
+---
+
+# 🔥 `pop` vs `apply`
+
+| Command           | Behavior             |
+| ----------------- | -------------------- |
+| `git stash pop`   | Apply + delete stash |
+| `git stash apply` | Apply only           |
+
+---
+
+# 📊 Visual Workflow
+
+```text
+1. Work in feature branch
+   ↓
+2. git stash  📦
+   ↓
+3. switch branch 🔄
+   ↓
+4. do other work
+   ↓
+5. git stash pop ▶️
+```
+
+---
+
+# ⚠️ Important Notes
+
+### ❌ Stash is local only
+
+👉 Not pushed to GitHub
+
+---
+
+### ❌ Can cause conflicts
+
+👉 If code changed after stashing
+
+---
+
+### ❌ Easy to forget stashes
+
+👉 Always check:
+
+```bash
+git stash list
+```
+
+---
+
+# 🏆 Pro Tips
+
+### 1️⃣ Include untracked files
+
+```bash
+git stash -u
+```
+
+---
+
+### 2️⃣ Partial stash (interactive)
+
+```bash
+git stash -p
+```
+
+👉 Choose what to stash
+
+---
+
+### 3️⃣ Create branch from stash
+
+```bash
+git stash branch new-branch
+```
+
+👉 Very powerful 🔥
+
+---
+
+# 🧠 Mental Model
+
+👉 Think:
+
+* `stash` = 📦 temporary locker
+* `commit` = 📁 permanent save
+
+---
+
+# 🧩 Real Example Workflow
+
+```bash
+# working on feature
+git add .
+git stash
+
+# switch to fix bug
+git switch main
+
+# fix bug
+git commit -m "Fix issue"
+
+# go back
+git switch feature
+
+# restore work
+git stash pop
+```
+
+---
+
+# 📌 Final Summary
+
+✔ Temporarily saves uncommitted work
+✔ Keeps working directory clean
+✔ Helps in multitasking
+✔ Not a replacement for commits
+
+---
+
+## 🧠 One-line understanding
+
+> 📦 **`git stash` = “Save my unfinished work, I’ll come back later”**
+
+---
