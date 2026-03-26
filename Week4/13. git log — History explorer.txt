@@ -1,0 +1,271 @@
+🧠13.git log — History explorer
+
+git log
+
+🔥 Better view:
+git log --oneline --graph --all
+
+👉 Shows:
+
+commit tree
+branches
+merges
+
+
+## 📜 `git log` — The History Explorer
+
+---
+
+# 🧠 Core Idea
+
+> **`git log` = view the complete history of commits**
+
+👉 It shows:
+
+* Who made changes 👤
+* When they were made 🕒
+* What changed 📝
+
+---
+
+# 🤔 WHY we use `git log`
+
+### ✅ 1. Understand project history
+
+👉 See how code evolved over time
+
+---
+
+### ✅ 2. Debug issues
+
+👉 Find **when a bug was introduced**
+
+---
+
+### ✅ 3. Track changes by developer
+
+👉 Who changed what
+
+---
+
+### ✅ 4. Recover lost work
+
+👉 Find old commits and restore code
+
+---
+
+# ⚙️ Basic Usage
+
+```bash
+git log
+```
+
+---
+
+## 📊 Example Output
+
+```text
+commit a1b2c3d4
+Author: Aviranjan Das
+Date:   Thu Mar 26
+
+    Add login feature
+
+commit x9y8z7
+Author: Teammate
+Date:   Wed Mar 25
+
+    Fix navbar bug
+```
+
+---
+
+# 🔍 Important Parts
+
+* **Commit ID (hash)** → unique identifier
+* **Author** → who made change
+* **Date** → when
+* **Message** → what was done
+
+---
+
+# 🚀 Useful Variations (Must Know)
+
+---
+
+## 🔹 1. Short & Clean Log
+
+```bash
+git log --oneline
+```
+
+👉 Output:
+
+```text
+a1b2c3 Add login feature
+x9y8z7 Fix navbar bug
+```
+
+---
+
+## 🔹 2. Visual Graph (🔥 Powerful)
+
+```bash
+git log --oneline --graph --all
+```
+
+👉 Shows branch structure
+
+```text
+* a1b2c3 (HEAD -> main)
+| * d4e5f6 (feature/login)
+|/
+* x9y8z7
+```
+
+---
+
+## 🔹 3. Show last N commits
+
+```bash
+git log -n 3
+```
+
+---
+
+## 🔹 4. Filter by author
+
+```bash
+git log --author="Aviranjan"
+```
+
+---
+
+## 🔹 5. See changes (diff)
+
+```bash
+git log -p
+```
+
+👉 Shows actual code changes
+
+---
+
+## 🔹 6. One file history
+
+```bash
+git log file.js
+```
+
+---
+
+# 📊 Visual Understanding
+
+## Simple history
+
+```text
+A ─── B ─── C ─── D
+                  ↑
+                HEAD
+```
+
+👉 `git log` shows: D → C → B → A
+
+---
+
+## With branches
+
+```text
+A ─── B ─── C ─── F
+            \
+             D ─── E
+```
+
+👉 `--graph` helps visualize this
+
+---
+
+# 🧩 Real Workflow Example
+
+```bash
+git log --oneline --graph --all
+```
+
+👉 Use to:
+
+* Understand branches
+* See merges
+* Track commits
+
+---
+
+# ⚠️ Common Mistakes
+
+### ❌ Ignoring commit messages
+
+👉 Always read them
+
+---
+
+### ❌ Using default log only
+
+👉 Use `--oneline` for clarity
+
+---
+
+### ❌ Not filtering logs
+
+👉 Use options for better analysis
+
+---
+
+# 🏆 Pro Tips
+
+### 1️⃣ Pretty format
+
+```bash
+git log --pretty=format:"%h - %an, %ar : %s"
+```
+
+---
+
+### 2️⃣ Search commits
+
+```bash
+git log --grep="login"
+```
+
+---
+
+### 3️⃣ See branch history clearly
+
+```bash
+git log --oneline --decorate --graph --all
+```
+
+---
+
+# 🧠 Mental Model
+
+👉 Think:
+
+* Git = timeline
+* Commits = checkpoints
+* `git log` = timeline viewer
+
+---
+
+# 📌 Final Summary
+
+✔ Shows full commit history
+✔ Helps debug & track changes
+✔ Supports filters & visualization
+✔ Essential for every developer
+
+---
+
+## 🧠 One-line understanding
+
+> 📜 **`git log` = “Show me everything that happened in this project”**
+
+---
