@@ -1,0 +1,281 @@
+🧠 15.Undo Commands (VERY IMPORTANT ⚠️)
+
+🔙 Unstage file:
+git restore --staged file.js
+🔙 Discard changes:
+
+git restore file.js
+🔙 Undo commit (keep changes):
+
+git reset --soft HEAD~1
+🔙 Hard reset:
+
+git reset --hard HEAD~1
+🚨 Deletes everything
+
+
+
+## ⚠️ 15. Undo Commands in Git — (VERY IMPORTANT)
+
+Undoing in Git is powerful—but dangerous if misunderstood. Let’s break it down **clearly + safely** so you never lose work.
+
+---
+
+# 🧠 Core Idea
+
+> Git doesn’t “delete” easily — it **moves pointers or restores snapshots**
+
+👉 Different commands undo **different stages** of your workflow.
+
+---
+
+# 🎯 First Understand the 3 Areas
+
+```text
+Working Directory → Staging Area → Repository (Commits)
+```
+
+👉 Every undo command targets one of these 👆
+
+---
+
+# 🧩 1. Undo Unstaged Changes (Working Directory)
+
+## 🔹 Command:
+
+```bash
+git restore file.js
+```
+
+👉 Removes changes in file (not staged)
+
+---
+
+## 📊 Visual
+
+```text
+Before:
+file.js (modified)
+
+After:
+file.js (original state)
+```
+
+⚠️ **Danger**: Changes are permanently lost
+
+---
+
+# 🧩 2. Unstage Changes (Staging Area → Working)
+
+## 🔹 Command:
+
+```bash
+git restore --staged file.js
+```
+
+👉 Removes from staging, keeps file changes
+
+---
+
+## 📊 Visual
+
+```text
+Staging Area ❌
+Working Directory ✅ (changes still exist)
+```
+
+---
+
+# 🧩 3. Undo Last Commit (Keep Changes)
+
+## 🔹 Command:
+
+```bash
+git reset --soft HEAD~1
+```
+
+👉 Removes last commit
+👉 Keeps all changes staged
+
+---
+
+## 📊 Visual
+
+```text
+Before:
+A ─── B ─── C (HEAD)
+
+After:
+A ─── B (HEAD)
+Changes from C still exist
+```
+
+---
+
+# 🧩 4. Undo Last Commit (Unstage Changes)
+
+## 🔹 Command:
+
+```bash
+git reset --mixed HEAD~1
+```
+
+👉 Default reset
+👉 Keeps changes but unstaged
+
+---
+
+# 🧩 5. Undo Last Commit (Delete Everything ⚠️)
+
+## 🔹 Command:
+
+```bash
+git reset --hard HEAD~1
+```
+
+👉 Deletes:
+
+* commit
+* staged changes
+* working changes
+
+⚠️ **Danger: irreversible (almost)**
+
+---
+
+# 🧩 6. Undo a Specific Commit (Safe Way)
+
+## 🔹 Command:
+
+```bash
+git revert commit_id
+```
+
+👉 Creates a new commit that **reverses changes**
+
+---
+
+## 📊 Visual
+
+```text
+A ─── B ─── C ─── D
+             ↓
+         revert C
+
+Result:
+A ─── B ─── C ─── D ─── E
+```
+
+👉 Safe for team projects ✅
+
+---
+
+# 🧩 7. Undo File to Previous Commit
+
+```bash
+git checkout HEAD file.js
+```
+
+👉 Restores file from last commit
+
+(Modern way 👇)
+
+```bash
+git restore file.js
+```
+
+---
+
+# 🔥 Quick Decision Table
+
+| Situation                         | Command                        |
+| --------------------------------- | ------------------------------ |
+| Undo file changes                 | `git restore file.js`          |
+| Unstage file                      | `git restore --staged file.js` |
+| Undo last commit (keep changes)   | `git reset --soft HEAD~1`      |
+| Undo last commit (remove changes) | `git reset --hard HEAD~1`      |
+| Undo commit safely (team)         | `git revert`                   |
+
+---
+
+# ⚠️ Most Dangerous Commands
+
+### 🚨 `git reset --hard`
+
+👉 Deletes everything
+
+---
+
+### 🚨 `git checkout file`
+
+👉 Overwrites file instantly
+
+---
+
+# 🧠 Real Workflow Example
+
+```bash
+git status
+git diff
+
+# mistake? undo file
+git restore app.js
+
+# wrong commit?
+git reset --soft HEAD~1
+
+# pushed commit?
+git revert abc123
+```
+
+---
+
+# 🏆 Pro Tips
+
+### 1️⃣ Always check before undo
+
+```bash
+git status
+git log
+```
+
+---
+
+### 2️⃣ Use `revert` for shared branches
+
+👉 Never rewrite public history
+
+---
+
+### 3️⃣ Backup before hard reset
+
+```bash
+git branch backup
+```
+
+---
+
+# 🧠 Mental Model
+
+👉 Think:
+
+* `restore` → fix files
+* `reset` → move history
+* `revert` → reverse safely
+
+---
+
+# 📌 Final Summary
+
+✔ Git undo depends on where the change is
+✔ Use safe commands first
+✔ Avoid `--hard` unless sure
+✔ `revert` is safest for teams
+
+---
+
+## 🧠 One-line understanding
+
+> ⚠️ **Undo in Git = choosing the right tool for the right stage**
+
+---
