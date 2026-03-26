@@ -1,0 +1,318 @@
+🧠 11.git merge — Combining histories
+
+git merge feature-login
+
+💡 Deep Understanding:
+
+👉 Combines two branches
+
+Types:
+Fast-forward
+3-way merge
+⚠️ Conflict case:
+
+Git cannot decide → YOU must resolve
+
+
+## 🔀 `git merge` — Combining Histories (Deep + Visual)
+
+---
+
+# 🧠 Core Idea
+
+> **`git merge` = combine two branches into one**
+
+👉 It takes the history of one branch and **integrates it into your current branch**
+
+---
+
+# 🎯 Why we use `git merge`
+
+### ✅ 1. Add feature into main
+
+* You built something in a feature branch
+* Now you want it in `main`
+
+---
+
+### ✅ 2. Team collaboration
+
+* Multiple developers → different branches
+* Merge everything into one final codebase
+
+---
+
+### ✅ 3. Keep project updated
+
+* Combine work from different timelines
+
+---
+
+# 📍 Basic Syntax
+
+```bash
+git merge branch-name
+```
+
+👉 Always run from the branch you want to merge *into*
+
+---
+
+## 🧩 Example
+
+```bash
+git switch main
+git merge feature/login
+```
+
+👉 Means:
+
+> “Take `feature/login` and merge it into `main`”
+
+---
+
+# 🔥 Visual Understanding
+
+## 🟢 Before Merge
+
+```text
+main:           A ─── B ─── C
+                             
+feature/login:       └── D ─── E
+```
+
+---
+
+## 🔀 After Merge
+
+```text
+A ─── B ─── C ─────────────── M
+              \             /
+               D ─── E ────
+```
+
+👉 `M` = **merge commit**
+
+---
+
+# ⚙️ Types of Merge
+
+---
+
+## 1️⃣ Fast-Forward Merge (Simple)
+
+### 🧠 Condition:
+
+👉 No new commits in main
+
+---
+
+### Before:
+
+```text
+A ─── B ─── C   (main)
+               \
+                D ─── E (feature)
+```
+
+---
+
+### Command:
+
+```bash
+git merge feature
+```
+
+---
+
+### After:
+
+```text
+A ─── B ─── C ─── D ─── E
+                          ↑
+                        main
+```
+
+👉 No merge commit
+👉 Just pointer moves forward ✅
+
+---
+
+## 2️⃣ 3-Way Merge (Real Merge)
+
+### 🧠 Condition:
+
+👉 Both branches have new commits
+
+---
+
+### Before:
+
+```text
+main:      A ─── B ─── C ─── F
+                          
+feature:        └── D ─── E
+```
+
+---
+
+### After:
+
+```text
+A ─── B ─── C ─── F ─────── M
+              \           /
+               D ─── E ──
+```
+
+👉 Creates merge commit `M`
+
+---
+
+# ⚠️ Merge Conflicts
+
+## 🧠 When does it happen?
+
+👉 Same file + same lines changed in both branches
+
+---
+
+## 💥 Example
+
+```text
+<<<<<<< HEAD
+your code
+=======
+incoming code
+>>>>>>> feature/login
+```
+
+---
+
+## 🛠️ How to fix
+
+1. Open file
+2. Edit manually
+3. Remove markers
+
+Then:
+
+```bash
+git add .
+git commit
+```
+
+---
+
+# 🚀 Real Workflow
+
+```bash
+# go to main
+git switch main
+
+# update main
+git pull
+
+# merge feature
+git merge feature/navbar
+
+# push changes
+git push
+```
+
+---
+
+# 🔁 Merge vs Rebase (Quick Visual)
+
+## 🔀 Merge
+
+```text
+A ─── B ─── C ─── F ─── M
+              \       /
+               D ─── E
+```
+
+---
+
+## 🔁 Rebase
+
+```text
+A ─── B ─── C ─── F ─── D' ─── E'
+```
+
+---
+
+# 🧠 Mental Model
+
+👉 Think:
+
+* Branch = separate timeline
+* Merge = joining timelines
+
+---
+
+# ⚠️ Common Mistakes
+
+### ❌ Merging without pulling latest main
+
+👉 Causes conflicts
+
+---
+
+### ❌ Merging wrong branch
+
+👉 Always check:
+
+```bash
+git branch
+```
+
+---
+
+### ❌ Ignoring conflicts
+
+👉 Can break code
+
+---
+
+# 🏆 Pro Tips
+
+### 1️⃣ Preview before merge
+
+```bash
+git diff main feature
+```
+
+---
+
+### 2️⃣ Abort merge if needed
+
+```bash
+git merge --abort
+```
+
+---
+
+### 3️⃣ Force no fast-forward
+
+```bash
+git merge --no-ff feature
+```
+
+👉 Keeps history clear
+
+---
+
+# 📌 Final Summary
+
+✔ `git merge` combines branches
+✔ Can be fast-forward or 3-way
+✔ May create merge commit
+✔ Conflicts must be resolved manually
+
+---
+
+## 🧠 One-line understanding
+
+> 🔀 **`git merge` = combine two development histories into one**
+
+---
