@@ -1,0 +1,266 @@
+🧠 14.git diff — See changes
+
+git diff
+
+💡 Deep Understanding:
+
+👉 Shows exact code difference
+
+Types:
+git diff
+git diff --staged
+
+## 🔍 `git diff` — See Changes (Deep + Practical)
+
+---
+
+# 🧠 Core Idea
+
+> **`git diff` = show differences between versions of your code**
+
+👉 It answers:
+
+* What changed?
+* Where did it change?
+* How did it change?
+
+---
+
+# 🤔 WHY we use `git diff`
+
+### ✅ 1. Review changes before commit
+
+👉 Avoid mistakes
+
+---
+
+### ✅ 2. Debug issues
+
+👉 Find exactly what changed
+
+---
+
+### ✅ 3. Compare versions
+
+👉 Between commits, branches, or files
+
+---
+
+### ✅ 4. Code review (personal)
+
+👉 Check your own work before pushing
+
+---
+
+# ⚙️ Basic Usage
+
+```bash
+git diff
+```
+
+👉 Shows **unstaged changes** (working directory vs staging area)
+
+---
+
+# 🎨 How to Read `git diff`
+
+```diff
+diff --git a/app.js b/app.js
+index 123..456 100644
+--- a/app.js
++++ b/app.js
+@@ -1,3 +1,3 @@
+ console.log("Hello");
+-console.log("Bug");
++console.log("Fixed");
+```
+
+---
+
+## 🔑 Meaning
+
+* `-` → removed line ❌
+* `+` → added line ✅
+* `@@` → location of change
+
+---
+
+# 📊 Visual Understanding
+
+```text
+Before:               After:
+
+console.log("Bug");   console.log("Fixed");
+        ❌                     ✅
+```
+
+---
+
+# 🚀 Most Important Variations
+
+---
+
+## 🔹 1. Unstaged changes
+
+```bash
+git diff
+```
+
+👉 Working directory vs staging
+
+---
+
+## 🔹 2. Staged changes
+
+```bash
+git diff --staged
+```
+
+👉 What will be committed
+
+---
+
+## 🔹 3. Compare commits
+
+```bash
+git diff a1b2c3 d4e5f6
+```
+
+---
+
+## 🔹 4. Compare branches
+
+```bash
+git diff main feature/login
+```
+
+---
+
+## 🔹 5. Specific file
+
+```bash
+git diff app.js
+```
+
+---
+
+## 🔹 6. Summary only
+
+```bash
+git diff --stat
+```
+
+👉 Shows:
+
+* files changed
+* lines added/removed
+
+---
+
+# 🧩 Real Workflow Example
+
+```bash
+git status
+git diff            # check changes
+git add .
+git diff --staged   # verify staged changes
+git commit -m "message"
+```
+
+👉 Professional workflow ✅
+
+---
+
+# 🔄 With Branches (Visual)
+
+```text
+main:      A ─── B ─── C
+                          
+feature:        └── D ─── E
+```
+
+```bash
+git diff main feature
+```
+
+👉 Shows difference between two timelines
+
+---
+
+# ⚠️ Common Mistakes
+
+### ❌ Thinking diff shows history
+
+👉 It shows differences, not commits
+
+---
+
+### ❌ Forgetting staged vs unstaged
+
+👉 Use `--staged` properly
+
+---
+
+### ❌ Ignoring diff before commit
+
+👉 Leads to bad commits
+
+---
+
+# 🏆 Pro Tips
+
+### 1️⃣ Word-level diff
+
+```bash
+git diff --word-diff
+```
+
+---
+
+### 2️⃣ Color highlight
+
+```bash
+git diff --color
+```
+
+---
+
+### 3️⃣ Ignore whitespace
+
+```bash
+git diff -w
+```
+
+---
+
+### 4️⃣ Compare with last commit
+
+```bash
+git diff HEAD
+```
+
+---
+
+# 🧠 Mental Model
+
+👉 Think:
+
+* `git log` = timeline 📜
+* `git diff` = difference 🔍
+
+---
+
+# 📌 Final Summary
+
+✔ Shows exact code changes
+✔ Works with files, commits, branches
+✔ Helps avoid mistakes
+✔ Essential before commit
+
+---
+
+## 🧠 One-line understanding
+
+> 🔍 **`git diff` = “Show me exactly what changed in my code”**
+
+---
