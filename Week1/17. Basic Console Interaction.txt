@@ -315,5 +315,5 @@ Result = 20
 
 ✅ Important skill for programmers:
 
-> **Always read the console carefully.
-> Most debugging clues are written there.**
+> Always read the console carefully.
+> Most debugging clues are written there.
